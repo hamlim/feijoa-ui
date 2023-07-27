@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import './globals.css'
+import { Container } from '@components/ui/container'
 
 import { Inter } from 'next/font/google'
 
@@ -10,7 +11,9 @@ export default function Layout({ children }) {
     <html lang="en" className={inter.className}>
       <body>
         <main className="min-h-screen">
-          <header></header>
+          <header>
+            <Container></Container>
+          </header>
           <section>{children}</section>
           <footer></footer>
         </main>

@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Layout({ children }) {
   return (
-    <html lang="en-US" className={inter.className}>
+    <html lang="en" className={inter.className}>
       <body>
         <main className="min-h-screen">
           <header></header>

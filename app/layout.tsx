@@ -1,8 +1,8 @@
-import { Metadata } from 'next'
 import './globals.css'
-import { Container } from '@components/ui/container'
-
+import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { ThemeProvider } from '@components/ui/theme-provider'
+import { Nav } from './Nav'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -10,13 +10,15 @@ export default function Layout({ children }) {
   return (
     <html lang="en" className={inter.className}>
       <body>
-        <main className="min-h-screen">
-          <header>
-            <Container></Container>
-          </header>
-          <section>{children}</section>
-          <footer></footer>
-        </main>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <main className="min-h-screen p-4 flex flex-col gap-4">
+            <header>
+              <Nav />
+            </header>
+            <article>{children}</article>
+            <footer></footer>
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   )

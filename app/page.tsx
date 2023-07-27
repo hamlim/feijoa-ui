@@ -1,3 +1,5 @@
+import { Container } from '@components/ui/container'
+
 export default function Index() {
-  return 'TODO!'
+  return <Container>TODO!</Container>
 }

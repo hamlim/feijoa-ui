@@ -12,13 +12,11 @@ import {
   NavigationMenuTrigger,
 } from '@components/ui/navigation-menu'
 import { FlaskConical, GithubIcon, HardHat } from 'lucide-react'
-import NextLink from 'next/link'
+import NextLink, { LinkProps } from 'next/link'
 
-interface ListItemProps {
+interface ListItemProps extends Omit<LinkProps<string>, 'title'> {
   className?: string
   title: ReactNode
-  children: ReactNode
-  href: string
 }
 
 function ListItem({

@@ -1,11 +1,14 @@
 import { Container } from '@components/ui/container'
 import { Heading } from '@components/ui/heading'
 import { BaseLink, Link } from '@components/ui/link'
+import { Text } from '@components/ui/text'
 
 export default function KitchenSink() {
   return (
     <div>
-      <Container>Container!</Container>
+      <Container>
+        <Text>Container and Text!</Text>
+      </Container>
       <Container>
         <Heading is="h1">H1</Heading>
         <Heading is="h2">H2</Heading>

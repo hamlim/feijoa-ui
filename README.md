@@ -1,6 +1,6 @@
-# Template Next.js App
+# Feijoa UI
 
-This repo acts as a template repo for some of my Next.js applications.
+TODO
 
 ## Getting Started:
 

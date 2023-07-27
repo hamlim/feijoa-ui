@@ -1,9 +1,13 @@
 import { Metadata } from 'next'
-import '@styles/globals.css'
+import './globals.css'
+
+import { Inter } from 'next/font/google'
+
+const inter = Inter({ subsets: ['latin'] })
 
 export default function Layout({ children }) {
   return (
-    <html lang="en-US" data-theme="winter">
+    <html lang="en-US" className={inter.className}>
       <body>
         <main className="min-h-screen">
           <header></header>
@@ -16,7 +20,7 @@ export default function Layout({ children }) {
 }
 
 export let metadata: Metadata = {
-  title: 'Template Next App',
+  title: 'Feijoa UI',
   icons: [
     {
       url: '/favicon.ico',

@@ -1,11 +1,8 @@
+/** @type {import('next').NextConfig} */
 export default {
   experimental: {
-    appDir: true,
+    typedRoutes: true,
+    serverActions: true,
   },
-  modularizeImports: {
-    '@ds-pack/components': {
-      transform: '@ds-pack/components/dist/{{member}}',
-      skipDefaultConversion: true,
-    },
-  },
+  modularizeImports: {},
 }

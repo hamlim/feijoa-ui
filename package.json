@@ -45,6 +45,7 @@
     "date-fns": "^2.30.0",
     "lucide-react": "^0.263.1",
     "next": "canary",
+    "next-themes": "^0.2.1",
     "postcss": "^8.4.21",
     "react": "experimental",
     "react-day-picker": "^8.8.0",

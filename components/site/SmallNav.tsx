@@ -123,7 +123,8 @@ function MobileLink({
     <Link
       href={href}
       onClick={() => {
-        router.push(href.toString())
+        // @ts-expect-error - doesn't play nicely with typed routes at the moment
+        router.push(href)
         onOpenChange?.(false)
       }}
       className={cn(className)}

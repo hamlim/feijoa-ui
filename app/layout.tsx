@@ -25,11 +25,67 @@ export default function Layout({ children }) {
 }
 
 export let metadata: Metadata = {
-  title: 'Feijoa UI',
-  icons: [
+  title: {
+    default: 'Feijoa UI',
+    template: `%s - Feijoa UI`,
+  },
+  description: 'A barebones UI component recipe-kit!',
+  keywords: [
+    'Next.js',
+    'React',
+    'Tailwind CSS',
+    'React Server Components',
+    'Radix UI',
+    'Lucide Icons',
+    'shadcn/ui',
+  ],
+  authors: [
     {
-      url: '/favicon.ico',
-      rel: 'shortcut icon',
+      name: 'Matt Hamlin',
+      url: 'https://matthamlin.me',
     },
   ],
+  creator: 'Matt Hamlin',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: 'white' },
+    { media: '(prefers-color-scheme: dark)', color: 'black' },
+  ],
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://feijoa-ui.vercel.app',
+    title: 'Feijoa UI',
+    description: 'A barebones UI component recipe-kit!',
+    siteName: 'Feijoa UI',
+    images: [
+      {
+        url: 'https://feijoa-ui.vercel.app/icon-512.png',
+        width: 512,
+        height: 512,
+        alt: 'Feijoa UI: A barebones UI component recipe-kit!',
+      },
+    ],
+    // images: [
+    //   {
+    //     url: siteConfig.ogImage,
+    //     width: 1200,
+    //     height: 630,
+    //     alt: siteConfig.name,
+    //   },
+    // ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Feijoa UI',
+    description: 'A barebones UI component recipe-kit!',
+    images: ['https://feijoa-ui.vercel.app/icon-512.png'],
+    // images: [siteConfig.ogImage],
+    creator: '@immatthamlin',
+  },
+  icons: {
+    icon: '/favicon.ico',
+    // shortcut: '/favicon-16x16.png',
+    // apple: '/apple-touch-icon.png',
+  },
+  manifest: `https://feijoa-ui.vercel.app/site.webmanifest`,
 }

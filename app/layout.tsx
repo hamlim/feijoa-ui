@@ -11,7 +11,7 @@ export default function Layout({ children }) {
     <html lang="en" className={inter.className}>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <main className="min-h-screen p-4 flex flex-col gap-4">
+          <main className="min-h-screen flex flex-col gap-4">
             <header>
               <Nav />
             </header>

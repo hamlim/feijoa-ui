@@ -1,3 +1,4 @@
+import { Box } from '@components/ui/box'
 import { Container } from '@components/ui/container'
 import { Heading } from '@components/ui/heading'
 import { BaseLink, Link } from '@components/ui/link'
@@ -26,6 +27,10 @@ export default function KitchenSink() {
         <BaseLink href="https://matthamlin.me" target="_blank">
           External Link!
         </BaseLink>
+      </Container>
+      <Container>
+        <Box is="marquee">Box (as marquee)</Box>
+        <Box is={Text}>Box as Text!</Box>
       </Container>
     </Stack>
   )

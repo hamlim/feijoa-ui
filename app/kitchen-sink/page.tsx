@@ -1,3 +1,4 @@
+import { Blockquote } from '@components/ui/blockquote'
 import { Box } from '@components/ui/box'
 import { Code } from '@components/ui/code'
 import { CodeBlock } from '@components/ui/code-block'
@@ -62,6 +63,12 @@ export default function Page() {
       </Container>
       <Container>
         <Code>feijoa-ui</Code>
+      </Container>
+      <Container>
+        <Blockquote>
+          Some important quote here!
+          <br />- Some Person
+        </Blockquote>
       </Container>
     </Stack>
   )

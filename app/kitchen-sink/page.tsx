@@ -1,4 +1,5 @@
 import { Box } from '@components/ui/box'
+import { Code } from '@components/ui/code'
 import { CodeBlock } from '@components/ui/code-block'
 import { Container } from '@components/ui/container'
 import { Heading } from '@components/ui/heading'
@@ -58,6 +59,9 @@ export default function Page() {
   )
 }`}</CodeBlock>
         </Box>
+      </Container>
+      <Container>
+        <Code>feijoa-ui</Code>
       </Container>
     </Stack>
   )

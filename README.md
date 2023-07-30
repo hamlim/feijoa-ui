@@ -31,3 +31,4 @@ This project wouldn't be possible without the following:
 - [Next.js](https://nextjs.org/)
 - [TailwindCSS](https://tailwindcss.com/)
 - [Lucide Icons](https://lucide.dev/)
+- [Bright](https://bright.codehike.org/)

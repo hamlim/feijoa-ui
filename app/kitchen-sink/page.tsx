@@ -1,4 +1,5 @@
 import { Box } from '@components/ui/box'
+import { CodeBlock } from '@components/ui/code-block'
 import { Container } from '@components/ui/container'
 import { Heading } from '@components/ui/heading'
 import { BaseLink, Link } from '@components/ui/link'
@@ -31,6 +32,32 @@ export default function KitchenSink() {
       <Container>
         <Box is="marquee">Box (as marquee)</Box>
         <Box is={Text}>Box as Text!</Box>
+      </Container>
+      <Container>
+        <Box>
+          <Heading is="h3">Dark Theme:</Heading>
+          <CodeBlock lang="tsx">{`import {CodeBlock} from '@components/ui/code-block'
+
+export default function Page() {
+  return (
+    <main data-theme="light">
+      <CodeBlock lang="tsx">{\`<div>foo</div>\`}</CodeBlock>
+    </main>
+  )
+}`}</CodeBlock>
+        </Box>
+        <Box data-theme="light">
+          <Heading is="h3">Light Theme:</Heading>
+          <CodeBlock lang="tsx">{`import {CodeBlock} from '@components/ui/code-block'
+
+export default function Page() {
+  return (
+    <main data-theme="light">
+      <CodeBlock lang="tsx">{\`<div>foo</div>\`}</CodeBlock>
+    </main>
+  )
+}`}</CodeBlock>
+        </Box>
       </Container>
     </Stack>
   )

@@ -5,6 +5,7 @@ import { CodeBlock } from '@components/ui/code-block'
 import { Container } from '@components/ui/container'
 import { Heading } from '@components/ui/heading'
 import { BaseLink, Link } from '@components/ui/link'
+import { List, ListItem } from '@components/ui/list'
 import { Stack } from '@components/ui/stack'
 import { Text } from '@components/ui/text'
 
@@ -69,6 +70,18 @@ export default function Page() {
           Some important quote here!
           <br />- Some Person
         </Blockquote>
+      </Container>
+      <Container>
+        <List>
+          <ListItem>Lists</ListItem>
+          <ListItem>Are</ListItem>
+          <ListItem>Fun</ListItem>
+        </List>
+        <List is="ol">
+          <ListItem>Lists</ListItem>
+          <ListItem>Are</ListItem>
+          <ListItem>Fun</ListItem>
+        </List>
       </Container>
     </Stack>
   )

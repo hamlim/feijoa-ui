@@ -41,6 +41,7 @@ export default function KitchenSink() {
           <Heading is="h3">Dark Theme:</Heading>
           <CodeBlock lang="tsx">{`import {CodeBlock} from '@components/ui/code-block'
 
+// collapse(1:6)
 export default function Page() {
   return (
     <main data-theme="light">

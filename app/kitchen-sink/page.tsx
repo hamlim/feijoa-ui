@@ -3,6 +3,7 @@ import { Box } from '@components/ui/box'
 import { Code } from '@components/ui/code'
 import { CodeBlock } from '@components/ui/code-block'
 import { Container } from '@components/ui/container'
+import { Footnote, FootnoteRef } from '@components/ui/footnote'
 import { Heading } from '@components/ui/heading'
 import { BaseLink, Link } from '@components/ui/link'
 import { List, ListItem } from '@components/ui/list'
@@ -130,6 +131,13 @@ export default function Page() {
             </TableRow>
           </TableBody>
         </Table>
+      </Example>
+      <Example title="Footnotes">
+        <Text>
+          Some text here with an <FootnoteRef id="1" /> inline footnote!
+        </Text>
+        <div className="mb-10" />
+        <Footnote id="1">Some content within the footnote!</Footnote>
       </Example>
     </Stack>
   )

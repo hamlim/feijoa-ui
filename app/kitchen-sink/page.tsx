@@ -18,17 +18,23 @@ import {
 } from '@components/ui/table'
 import { Text } from '@components/ui/text'
 
+function Example({ title, children }) {
+  return (
+    <Container>
+      <Heading is="h3">{title}:</Heading>
+      <Separator />
+      {children}
+    </Container>
+  )
+}
+
 export default function KitchenSink() {
   return (
     <Stack gap={4}>
-      <Container>
-        <Heading is="h3">Text:</Heading>
-        <Separator />
+      <Example title="Text">
         <Text>Container and Text!</Text>
-      </Container>
-      <Container>
-        <Heading is="h3">Headings:</Heading>
-        <Separator />
+      </Example>
+      <Example title="Headings">
         <Stack gap={4}>
           <Heading is="h1">H1</Heading>
           <Heading is="h2">H2</Heading>
@@ -37,25 +43,19 @@ export default function KitchenSink() {
           <Heading is="h5">H5</Heading>
           <Heading is="h6">H6</Heading>
         </Stack>
-      </Container>
-      <Container>
-        <Heading is="h3">Links:</Heading>
-        <Separator />
+      </Example>
+      <Example title="Links">
         <Link href="/">Local Link</Link>
         <br />
         <BaseLink href="https://matthamlin.me" target="_blank">
           External Link!
         </BaseLink>
-      </Container>
-      <Container>
-        <Heading is="h3">Box:</Heading>
-        <Separator />
+      </Example>
+      <Example title="Box">
         <Box is="marquee">Box (as marquee)</Box>
         <Box is={Text}>Box as Text!</Box>
-      </Container>
-      <Container>
-        <Heading is="h3">Code Blocks:</Heading>
-        <Separator />
+      </Example>
+      <Example title="Code Blocks">
         <Box>
           <Heading is="h3">Dark Theme:</Heading>
           <CodeBlock lang="tsx">{`import {CodeBlock} from '@components/ui/code-block'
@@ -81,23 +81,17 @@ export default function Page() {
   )
 }`}</CodeBlock>
         </Box>
-      </Container>
-      <Container>
-        <Heading is="h3">Inline Code:</Heading>
-        <Separator />
+      </Example>
+      <Example title="Inline Code">
         <Code>feijoa-ui</Code>
-      </Container>
-      <Container>
-        <Heading is="h3">Blockquote:</Heading>
-        <Separator />
+      </Example>
+      <Example title="Blockquote">
         <Blockquote>
           Some important quote here!
           <br />- Some Person
         </Blockquote>
-      </Container>
-      <Container>
-        <Heading is="h3">Lists:</Heading>
-        <Separator />
+      </Example>
+      <Example title="Lists">
         <List>
           <ListItem>Lists</ListItem>
           <ListItem>Are</ListItem>
@@ -108,10 +102,8 @@ export default function Page() {
           <ListItem>Are</ListItem>
           <ListItem>Fun</ListItem>
         </List>
-      </Container>
-      <Container>
-        <Heading is="h3">Table:</Heading>
-        <Separator />
+      </Example>
+      <Example title="Table">
         <Table>
           <TableHeader>
             <TableRow>
@@ -138,7 +130,7 @@ export default function Page() {
             </TableRow>
           </TableBody>
         </Table>
-      </Container>
+      </Example>
     </Stack>
   )
 }

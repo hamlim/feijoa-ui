@@ -18,6 +18,7 @@ import {
   TableRow,
 } from '@components/ui/table'
 import { Text } from '@components/ui/text'
+import { Image } from '@components/ui/image'
 
 function Example({ title, children }) {
   return (
@@ -138,6 +139,15 @@ export default function Page() {
         </Text>
         <div className="mb-10" />
         <Footnote id="1">Some content within the footnote!</Footnote>
+      </Example>
+      <Example title="Image">
+        <Text>Here is an image with built-in aspect ratio too!</Text>
+        <Image
+          src="https://images.unsplash.com/photo-1693856757413-637345a5e2ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3610&q=80"
+          objectFit="cover"
+          fill
+          alt="a snowy rooftop"
+        />
       </Example>
     </Stack>
   )

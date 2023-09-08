@@ -65,72 +65,72 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:13.4.20-canary.17":
-  version: 13.4.20-canary.17
-  resolution: "@next/env@npm:13.4.20-canary.17"
-  checksum: fbf32643f2e1cea34dab5c3fee895de6047d6b3a67432f210d3380a76cdc4fe6192099827e55ede2de91b21a3d2862450d8d3c1951ec18f50609b47155a3328f
+"@next/env@npm:13.4.20-canary.21":
+  version: 13.4.20-canary.21
+  resolution: "@next/env@npm:13.4.20-canary.21"
+  checksum: d4ac537bc0b5ac3dfe51f917ca739431d038410a321402d6df3de6a0d10ad3463d7bbd06ac1de4a768800556a74436251fe33e2d1bb1ff4519da4e4838510bd4
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:13.4.20-canary.17":
-  version: 13.4.20-canary.17
-  resolution: "@next/swc-darwin-arm64@npm:13.4.20-canary.17"
+"@next/swc-darwin-arm64@npm:13.4.20-canary.21":
+  version: 13.4.20-canary.21
+  resolution: "@next/swc-darwin-arm64@npm:13.4.20-canary.21"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:13.4.20-canary.17":
-  version: 13.4.20-canary.17
-  resolution: "@next/swc-darwin-x64@npm:13.4.20-canary.17"
+"@next/swc-darwin-x64@npm:13.4.20-canary.21":
+  version: 13.4.20-canary.21
+  resolution: "@next/swc-darwin-x64@npm:13.4.20-canary.21"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:13.4.20-canary.17":
-  version: 13.4.20-canary.17
-  resolution: "@next/swc-linux-arm64-gnu@npm:13.4.20-canary.17"
+"@next/swc-linux-arm64-gnu@npm:13.4.20-canary.21":
+  version: 13.4.20-canary.21
+  resolution: "@next/swc-linux-arm64-gnu@npm:13.4.20-canary.21"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-musl@npm:13.4.20-canary.17":
-  version: 13.4.20-canary.17
-  resolution: "@next/swc-linux-arm64-musl@npm:13.4.20-canary.17"
+"@next/swc-linux-arm64-musl@npm:13.4.20-canary.21":
+  version: 13.4.20-canary.21
+  resolution: "@next/swc-linux-arm64-musl@npm:13.4.20-canary.21"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:13.4.20-canary.17":
-  version: 13.4.20-canary.17
-  resolution: "@next/swc-linux-x64-gnu@npm:13.4.20-canary.17"
+"@next/swc-linux-x64-gnu@npm:13.4.20-canary.21":
+  version: 13.4.20-canary.21
+  resolution: "@next/swc-linux-x64-gnu@npm:13.4.20-canary.21"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-musl@npm:13.4.20-canary.17":
-  version: 13.4.20-canary.17
-  resolution: "@next/swc-linux-x64-musl@npm:13.4.20-canary.17"
+"@next/swc-linux-x64-musl@npm:13.4.20-canary.21":
+  version: 13.4.20-canary.21
+  resolution: "@next/swc-linux-x64-musl@npm:13.4.20-canary.21"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:13.4.20-canary.17":
-  version: 13.4.20-canary.17
-  resolution: "@next/swc-win32-arm64-msvc@npm:13.4.20-canary.17"
+"@next/swc-win32-arm64-msvc@npm:13.4.20-canary.21":
+  version: 13.4.20-canary.21
+  resolution: "@next/swc-win32-arm64-msvc@npm:13.4.20-canary.21"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-ia32-msvc@npm:13.4.20-canary.17":
-  version: 13.4.20-canary.17
-  resolution: "@next/swc-win32-ia32-msvc@npm:13.4.20-canary.17"
+"@next/swc-win32-ia32-msvc@npm:13.4.20-canary.21":
+  version: 13.4.20-canary.21
+  resolution: "@next/swc-win32-ia32-msvc@npm:13.4.20-canary.21"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:13.4.20-canary.17":
-  version: 13.4.20-canary.17
-  resolution: "@next/swc-win32-x64-msvc@npm:13.4.20-canary.17"
+"@next/swc-win32-x64-msvc@npm:13.4.20-canary.21":
+  version: 13.4.20-canary.21
+  resolution: "@next/swc-win32-x64-msvc@npm:13.4.20-canary.21"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -1861,9 +1861,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001406":
-  version: 1.0.30001527
-  resolution: "caniuse-lite@npm:1.0.30001527"
-  checksum: 7ad99d78d1a30d494471c8a9ead3fc40a816ee61b16fef330bba5bdae5d7ebaa965becc8cd09c7aa6240125ce790a5213a40cd240ceaa211508744ed86b79783
+  version: 1.0.30001528
+  resolution: "caniuse-lite@npm:1.0.30001528"
+  checksum: 7b6a71d41de1ce2b95f5851e7074050b7600157acf02c5701d9650a1faf824e368163f4ede5e269d4ea44fe33e00fe60673cb86f40cac35bd02a9a9a4ef7f162
   languageName: node
   linkType: hard
 
@@ -2742,19 +2742,19 @@ __metadata:
   linkType: hard
 
 "next@npm:canary":
-  version: 13.4.20-canary.17
-  resolution: "next@npm:13.4.20-canary.17"
+  version: 13.4.20-canary.21
+  resolution: "next@npm:13.4.20-canary.21"
   dependencies:
-    "@next/env": 13.4.20-canary.17
-    "@next/swc-darwin-arm64": 13.4.20-canary.17
-    "@next/swc-darwin-x64": 13.4.20-canary.17
-    "@next/swc-linux-arm64-gnu": 13.4.20-canary.17
-    "@next/swc-linux-arm64-musl": 13.4.20-canary.17
-    "@next/swc-linux-x64-gnu": 13.4.20-canary.17
-    "@next/swc-linux-x64-musl": 13.4.20-canary.17
-    "@next/swc-win32-arm64-msvc": 13.4.20-canary.17
-    "@next/swc-win32-ia32-msvc": 13.4.20-canary.17
-    "@next/swc-win32-x64-msvc": 13.4.20-canary.17
+    "@next/env": 13.4.20-canary.21
+    "@next/swc-darwin-arm64": 13.4.20-canary.21
+    "@next/swc-darwin-x64": 13.4.20-canary.21
+    "@next/swc-linux-arm64-gnu": 13.4.20-canary.21
+    "@next/swc-linux-arm64-musl": 13.4.20-canary.21
+    "@next/swc-linux-x64-gnu": 13.4.20-canary.21
+    "@next/swc-linux-x64-musl": 13.4.20-canary.21
+    "@next/swc-win32-arm64-msvc": 13.4.20-canary.21
+    "@next/swc-win32-ia32-msvc": 13.4.20-canary.21
+    "@next/swc-win32-x64-msvc": 13.4.20-canary.21
     "@swc/helpers": 0.5.1
     busboy: 1.6.0
     caniuse-lite: ^1.0.30001406
@@ -2793,7 +2793,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 502fbb10f387217775ac3ff366c351fcb6ef10bdf0ece77dcbbe4462ee8252ae91cdd537abd43192b3bfda089710d82ad0102fe2f8bb1dc5b41a6f9f85256c62
+  checksum: 8f6d464f80c87382e8d1eabba8ce9de30a6cfabbc7f800cf1dfba2615d0524f00440096bd6ef1d52af3bba8909fe13bd7d359dfd87d5d823bac9e9e7a9b5ed43
   languageName: node
   linkType: hard
 
@@ -3088,14 +3088,14 @@ __metadata:
   linkType: hard
 
 "react-dom@npm:experimental":
-  version: 0.0.0-experimental-9b4f847d9-20230901
-  resolution: "react-dom@npm:0.0.0-experimental-9b4f847d9-20230901"
+  version: 0.0.0-experimental-953cb02f6-20230907
+  resolution: "react-dom@npm:0.0.0-experimental-953cb02f6-20230907"
   dependencies:
     loose-envify: ^1.1.0
-    scheduler: 0.0.0-experimental-9b4f847d9-20230901
+    scheduler: 0.0.0-experimental-953cb02f6-20230907
   peerDependencies:
-    react: 0.0.0-experimental-9b4f847d9-20230901
-  checksum: 4bbaf2cca77c547090e21a8f3475ceaaf2a6bbf76e641739b6847991f7e42f1d57566487efab8a52fd702721558665908baa678d336f8df6912f58a45500ec7c
+    react: 0.0.0-experimental-953cb02f6-20230907
+  checksum: eb65b405ccf1bff45aaeca052f0186674764471a1686e7388c0df6edc361477644807dc9fc43fa9e6bd25a628d742baffa7a3cccba0be952e01962e441f6e6d1
   languageName: node
   linkType: hard
 
@@ -3180,11 +3180,11 @@ __metadata:
   linkType: hard
 
 "react@npm:experimental":
-  version: 0.0.0-experimental-9b4f847d9-20230901
-  resolution: "react@npm:0.0.0-experimental-9b4f847d9-20230901"
+  version: 0.0.0-experimental-953cb02f6-20230907
+  resolution: "react@npm:0.0.0-experimental-953cb02f6-20230907"
   dependencies:
     loose-envify: ^1.1.0
-  checksum: 0537c8130fb173e5d2d71a6fe51ca0b08873ab5d2540e31deb36c612c0223eeb32be985d1d46abd600c4d0220c571f015e31b5b77d2a020bc7cb424374adc422
+  checksum: 42936e450a1e847bcbdbec84bd4c276cb21c4463a6ffe5f2290d36102a9abdf0765e18f4544e4e880bc1c3f27140c2e7dba60710d09bb584eec8b3ed9fe171b6
   languageName: node
   linkType: hard
 
@@ -3298,12 +3298,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"scheduler@npm:0.0.0-experimental-9b4f847d9-20230901":
-  version: 0.0.0-experimental-9b4f847d9-20230901
-  resolution: "scheduler@npm:0.0.0-experimental-9b4f847d9-20230901"
+"scheduler@npm:0.0.0-experimental-953cb02f6-20230907":
+  version: 0.0.0-experimental-953cb02f6-20230907
+  resolution: "scheduler@npm:0.0.0-experimental-953cb02f6-20230907"
   dependencies:
     loose-envify: ^1.1.0
-  checksum: 982b8b347c3a2e2536688b25935fdbaaeffc0a6715f3e066fd591c34a182c64cf82bb3019700a1f65359e254f0d844b48f5a09e26d5ec803ed93429e0cd9bce3
+  checksum: 379f96e7e00c9c5df56c8e0bde13bd3a1fe8ffea95be526b310580e9576f759b130bc4113f70a6fbd3d83880ca45d24f975bd8954f46b7f9266bd0f799dd3a4a
   languageName: node
   linkType: hard
 

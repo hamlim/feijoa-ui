@@ -6,6 +6,7 @@ import { Blockquote } from './blockquote'
 import { Code } from './code'
 import { CodeBlock } from './code-block'
 import { Heading } from './heading'
+import { Image } from './image'
 
 type Prettify<T> = {
   [K in keyof T]: T[K]
@@ -37,6 +38,10 @@ export function del(props: Props<typeof Box>) {
 
 export function em(props: Props<typeof Box>) {
   return <Box {...props} is="em" />
+}
+
+export function strong(props: Props<typeof Box>) {
+  return <Box {...props} is="strong" />
 }
 
 export function h1(props: Props<typeof Heading>) {
@@ -88,3 +93,5 @@ export function code(props: Props<typeof Code> | Props<typeof CodeBlock>) {
     </Box>
   )
 }
+
+export { Image }

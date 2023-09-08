@@ -32,4 +32,4 @@ for (let componentFileName of dir) {
   })
 }
 
-writeFile(`./metadata.json`, JSON.stringify(metadata, null, 2))
+writeFile(`./public/metadata.json`, JSON.stringify(metadata, null, 2))

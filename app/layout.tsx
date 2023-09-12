@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from '@components/ui/theme-provider'
 import { Nav } from './Nav'
+import { Toaster } from '@components/ui/toaster'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,6 +19,7 @@ export default function Layout({ children }) {
             <article>{children}</article>
             <footer></footer>
           </main>
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

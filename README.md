@@ -1,6 +1,6 @@
 # Feijoa UI
 
-A barebones UI component recipe-kit!
+A barebones UI component recipe-kit! Like shadcn/ui++!
 
 ## Usage:
 

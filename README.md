@@ -11,11 +11,11 @@ TODO!
 ### Getting Started:
 
 ```sh
-yarn install
+bun install
 ```
 
 ```sh
-yarn dev
+bun dev
 ```
 
 ## Inspiration / Dependencies:

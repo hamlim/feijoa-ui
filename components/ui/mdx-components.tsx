@@ -1,5 +1,5 @@
 import { useContext, createServerContext } from 'react'
-import { BaseLink } from './link'
+import { BaseLink, Link as LocalLink } from './link'
 import { Box } from './box'
 import { List, ListItem } from './list'
 import { Blockquote } from './blockquote'
@@ -7,6 +7,9 @@ import { Code } from './code'
 import { CodeBlock } from './code-block'
 import { Heading } from './heading'
 import { Image } from './image'
+import { Text } from './text'
+import { Tweet } from './tweet'
+import { TLDR } from './tldr'
 
 type Prettify<T> = {
   [K in keyof T]: T[K]
@@ -18,6 +21,10 @@ type Props<InferredType extends (...args) => any> = Prettify<
 
 export function a(props: Props<typeof BaseLink>) {
   return <BaseLink {...props} />
+}
+
+export function Link(props: Props<typeof LocalLink>) {
+  return <LocalLink {...props} />
 }
 
 export function ul(props: Props<typeof List>) {
@@ -42,6 +49,10 @@ export function em(props: Props<typeof Box>) {
 
 export function strong(props: Props<typeof Box>) {
   return <Box {...props} is="strong" />
+}
+
+export function p(props: Props<typeof Text>) {
+  return <Text {...props} />
 }
 
 export function h1(props: Props<typeof Heading>) {
@@ -94,4 +105,12 @@ export function code(props: Props<typeof Code> | Props<typeof CodeBlock>) {
   )
 }
 
-export { Image }
+export function img(props: Props<typeof Image>) {
+  return <Image {...props} />
+}
+
+export function Time(props: Props<typeof Box>) {
+  return <Box {...props} is="time" />
+}
+
+export { Tweet, TLDR }

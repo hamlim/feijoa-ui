@@ -22,7 +22,8 @@ export function CodeBlock(props: Props) {
         extensions={defaultExtensions}
         lineNumbers
         {...props}
-        className={cn('p-4 ', props.className)}
+        style={{ margin: 0, ...props.style }}
+        // className={cn('p-5', props.className)}
       />
       <CopyCode code={props.children} />
     </div>

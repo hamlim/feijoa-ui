@@ -11,7 +11,7 @@ export function CopyCode({ code }: Props) {
   let { toast } = useToast()
   return (
     <Button
-      className="absolute top-0 right-0"
+      className="absolute top-1 right-1 p-0 h-8 w-8"
       variant="outline"
       size="icon"
       title="Copy code"
@@ -31,7 +31,7 @@ export function CopyCode({ code }: Props) {
         }
       }}
     >
-      <ClipboardCopyIcon />
+      <ClipboardCopyIcon className="h-5 w-5" />
       <span className="sr-only">Click to copy</span>
     </Button>
   )

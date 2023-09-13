@@ -19,6 +19,7 @@ import {
 } from '@components/ui/table'
 import { Text } from '@components/ui/text'
 import { Image } from '@components/ui/image'
+import { Figure } from '@components/ui/figure'
 
 function Example({ title, children }) {
   return (
@@ -143,6 +144,15 @@ export default function Page() {
       <Example title="Image">
         <Text>Here is an image with built-in aspect ratio too!</Text>
         <Image
+          src="https://images.unsplash.com/photo-1693856757413-637345a5e2ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3610&q=80"
+          objectFit="cover"
+          fill
+          alt="a snowy rooftop"
+        />
+      </Example>
+      <Example title="Figure">
+        <Figure
+          caption="A nice looking snowy rooftop"
           src="https://images.unsplash.com/photo-1693856757413-637345a5e2ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3610&q=80"
           objectFit="cover"
           fill

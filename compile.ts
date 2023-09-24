@@ -9,7 +9,7 @@ let dir = await readdir(componentsDir)
 dir = dir.filter((hunk) => path.extname(hunk))
 
 let metadata = {
-  version: execSync(`git rev-parse HEAD`).toString().replace('\\n', ''),
+  version: execSync(`git rev-parse HEAD`).toString().replace('\n', ''),
   components: [],
 }
 

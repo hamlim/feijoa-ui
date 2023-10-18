@@ -14,7 +14,7 @@
 /coverage
 
 # next.js
-/.next/
+.next/
 /out/
 
 # production
@@ -33,3 +33,7 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+
+# dist
+dist/
+node_modules/

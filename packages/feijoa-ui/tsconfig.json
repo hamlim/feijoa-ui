@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "types": ["bun-types"],
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "esModuleInterop": true,
+    "jsx": "react-jsx"
+  }
+}

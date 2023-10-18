@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "feijoa-ui": "workspace:*",
+    "feijoa-ui": "*",
     "@ds-pack/use-refs": "^1.0.0",
     "@hookform/resolvers": "^3.1.1",
     "@radix-ui/react-accordion": "^1.1.2",

@@ -2,12 +2,18 @@
   "name": "feijoa-ui-monorepo",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "site"
   ],
   "scripts": {
     "dev": "cd ./site && bun run dev",
-    "build:site": "cd ./site && bun run build",
-    "build:lib": "cd ./packages/feijoa-ui && bun run build",
-    "build:cli": "cd ./packages/cli && bun run build"
+    "build": "turbo run build",
+    "build:site": "turbo run build --filter feijoa-ui-site",
+    "build:lib": "turbo run build --filter feijoa-ui",
+    "build:cli": "turbo run build --filter @feijoa-ui/cli",
+    "pub": "cd ./packages/feijoa-ui && bun run pub"
+  },
+  "devDependencies": {
+    "turbo": "^1.10.15"
   }
 }

@@ -9,7 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "feijoa-ui": "*",
+    "feijoa-ui": "workspace:*",
     "@ds-pack/use-refs": "^1.0.0",
     "@hookform/resolvers": "^3.1.1",
     "@radix-ui/react-accordion": "^1.1.2",
@@ -48,7 +48,7 @@
     "cmdk": "^0.2.0",
     "date-fns": "^2.30.0",
     "lucide-react": "^0.263.1",
-    "next": "canary",
+    "next": "13.5.6-canary.6",
     "next-themes": "^0.2.1",
     "postcss": "^8.4.21",
     "react": "experimental",

@@ -7,11 +7,20 @@
   ],
   "scripts": {
     "dev": "cd ./site && bun run dev",
-    "build": "turbo run build",
-    "build:site": "turbo run build --filter feijoa-ui-site",
-    "build:lib": "turbo run build --filter feijoa-ui",
-    "build:cli": "turbo run build --filter @feijoa-ui/cli",
+    "format": "dprint fmt",
+    "build": "turbo run build --output-logs=new-only",
+    "build:site": "turbo run build --filter feijoa-ui-site --output-logs=new-only",
+    "build:lib": "turbo run build --filter feijoa-ui --output-logs=new-only",
+    "build:cli": "turbo run build --filter @feijoa-ui/cli --output-logs=new-only",
     "pub": "cd ./packages/feijoa-ui && bun run pub"
+  },
+  "dependencies": {
+    "react": "experimental",
+    "react-dom": "experimental"
+  },
+  "resolutions": {
+    "react": "experimental",
+    "react-dom": "experimental"
   },
   "devDependencies": {
     "turbo": "^1.10.15"

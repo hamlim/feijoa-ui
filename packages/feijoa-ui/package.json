@@ -18,9 +18,9 @@
     "pub": "npm publish --access public"
   },
   "devDependencies": {
-    "react": "*",
-    "react-dom": "*",
-    "react-is": "*",
+    "react": "experimental",
+    "react-dom": "experimental",
+    "react-is": "experimental",
     "typescript": "5.2.2",
     "@ds-pack/use-refs": "1.0.0",
     "@swc/cli": "0.1.62",

@@ -1,0 +1,22 @@
+{
+  "name": "@feijoa-ui/cli",
+  "bin": {
+    "feijoa-ui": "./bin/index"
+  },
+  "repository": {
+    "url": "git@github.com:hamlim/feijoa-ui.git",
+    "directory": "packages/cli"
+  },
+  "author": "Matt Hamlin <matthewjameshamlin@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "bun build ./src/index.ts --compile --minify --outfile ./bin/index"
+  },
+  "devDependencies": {
+    "bun-types": "^1.0.3",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "kleur": "4.1.5"
+  }
+}

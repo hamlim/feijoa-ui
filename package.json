@@ -5,6 +5,9 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "cd ./site && bun run dev"
+    "dev": "cd ./site && bun run dev",
+    "build:site": "cd ./site && bun run build",
+    "build:lib": "cd ./packages/feijoa-ui && bun run build",
+    "build:cli": "cd ./packages/cli && bun run build"
   }
 }

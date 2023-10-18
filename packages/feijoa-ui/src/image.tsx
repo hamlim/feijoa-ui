@@ -2,7 +2,9 @@ import { cn } from './cn'
 import NextImage from 'next/image'
 import { AspectRatio } from './aspect-ratio'
 
-export function Image(props) {
+type ImageProps = React.ComponentPropsWithoutRef<typeof NextImage>
+
+export function Image(props: ImageProps) {
   return (
     <AspectRatio ratio={16 / 9}>
       <NextImage

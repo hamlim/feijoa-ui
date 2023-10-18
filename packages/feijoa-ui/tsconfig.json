@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     // add Bun type definitions
-    "types": ["bun-types"],
+    "types": ["bun-types", "./externals.d.ts"],
 
     // enable latest features
     "lib": ["ESNext", "DOM"],
@@ -9,8 +9,9 @@
     "target": "esnext",
 
     // if TS 5.x+
+    "rootDir": "./src",
     "moduleResolution": "bundler",
-    "noEmit": true,
+    "emitDeclarationOnly": true,
     "allowImportingTsExtensions": true,
     "moduleDetection": "force",
 

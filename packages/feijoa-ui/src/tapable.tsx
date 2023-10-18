@@ -11,7 +11,7 @@ import { useSharedRef } from '@ds-pack/use-refs'
 export interface UseTapableProps {
   disabled?: boolean
   autoFocus?: boolean
-  onClick?: (e: MouseEvent) => void
+  onClick?: (e: MouseEvent | KeyboardEvent) => void
   onKeyDown?: (e: KeyboardEvent) => void
   [key: string]: unknown
 }
@@ -42,7 +42,7 @@ export function useTapable(
   }, [focused])
 
   let handleClick = useCallback(
-    function handleClick(event) {
+    function handleClick(event: MouseEvent | KeyboardEvent) {
       onClick(event)
       setFocused(true)
     },
@@ -50,7 +50,7 @@ export function useTapable(
   )
 
   let handleKeyDown = useCallback(
-    function handleKeyDown(event) {
+    function handleKeyDown(event: KeyboardEvent) {
       onKeyDown(event)
       if (event.key === 'Enter' || event.key === ' ') {
         if (event.key === ' ') {

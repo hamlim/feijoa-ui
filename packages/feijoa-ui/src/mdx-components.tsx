@@ -16,7 +16,7 @@ type Prettify<T> = {
   [K in keyof T]: T[K]
 } & {}
 
-type Props<InferredType extends (...args) => any> = Prettify<
+type Props<InferredType extends (...args: Array<any>) => any> = Prettify<
   Parameters<InferredType>[0]
 >
 
@@ -84,11 +84,15 @@ export function blockquote(props: Props<typeof Blockquote>) {
   return <Blockquote {...props} />
 }
 
+declare global {
+  var __preContext: any
+}
+
 if (!globalThis.__preContext) {
   globalThis.__preContext = createServerContext<boolean>('preContext', false)
 }
 
-export function pre(props) {
+export function pre(props: Record<string, unknown>) {
   return (
     <globalThis.__preContext.Provider value={true}>
       <Box className="not-prose" {...props} />
@@ -99,7 +103,8 @@ export function pre(props) {
 export function code(props: Props<typeof Code> | Props<typeof CodeBlock>) {
   let isPre = useContext(globalThis.__preContext)
   if (isPre) {
-    return <CodeBlock {...props} />
+    let codeBlockProps = props as Props<typeof CodeBlock>
+    return <CodeBlock {...codeBlockProps} />
   }
   return (
     <Box is="span" className="not-prose">

@@ -9,7 +9,7 @@ Code.theme = {
 }
 
 interface Props extends Partial<BrightProps> {
-  children?: string
+  children: string
 }
 
 let defaultExtensions: Array<Extension> = [collapse]
@@ -22,7 +22,6 @@ export function CodeBlock(props: Props) {
         lineNumbers
         {...props}
         style={{ margin: 0, ...props.style }}
-        // className={cn('p-5', props.className)}
       />
       <CopyCode code={props.children} />
     </div>

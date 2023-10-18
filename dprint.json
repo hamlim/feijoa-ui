@@ -20,6 +20,7 @@
     "https://plugins.dprint.dev/toml-0.5.4.wasm"
   ],
   "includes": [
-    "site/next.config.mjs"
+    "site/next.config.mjs",
+    "packages/feijoa-ui/.swcrc"
   ]
 }

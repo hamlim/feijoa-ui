@@ -1,9 +1,9 @@
 import './globals.css'
 import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { ThemeProvider } from 'feijoa-ui/theme-provider'
+import { ThemeProvider } from 'feijoa-ui'
 import { Nav } from './Nav'
-import { Toaster } from 'feijoa-ui/toaster'
+import { Toaster } from 'feijoa-ui'
 
 const inter = Inter({ subsets: ['latin'] })
 

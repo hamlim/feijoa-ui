@@ -1,25 +1,28 @@
-import { Blockquote } from 'feijoa-ui/blockquote'
-import { Box } from 'feijoa-ui/box'
-import { Code } from 'feijoa-ui/code'
-import { CodeBlock } from 'feijoa-ui/code-block'
-import { Container } from 'feijoa-ui/container'
-import { Footnote, FootnoteRef } from 'feijoa-ui/footnote'
-import { Heading } from 'feijoa-ui/heading'
-import { BaseLink, Link } from 'feijoa-ui/link'
-import { List, ListItem } from 'feijoa-ui/list'
-import { Separator } from 'feijoa-ui/separator'
-import { Stack } from 'feijoa-ui/stack'
 import {
+  BaseLink,
+  Blockquote,
+  Box,
+  Code,
+  CodeBlock,
+  Container,
+  Figure,
+  Footnote,
+  FootnoteRef,
+  Heading,
+  Image,
+  Link,
+  List,
+  ListItem,
+  Separator,
+  Stack,
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
   TableRow,
-} from 'feijoa-ui/table'
-import { Text } from 'feijoa-ui/text'
-import { Image } from 'feijoa-ui/image'
-import { Figure } from 'feijoa-ui/figure'
+  Text,
+} from "feijoa-ui";
 
 function Example({ title, children }) {
   return (
@@ -28,7 +31,7 @@ function Example({ title, children }) {
       <Separator />
       {children}
     </Container>
-  )
+  );
 }
 
 export default function KitchenSink() {
@@ -61,7 +64,8 @@ export default function KitchenSink() {
       <Example title="Code Blocks">
         <Box>
           <Heading is="h3">Dark Theme:</Heading>
-          <CodeBlock lang="tsx">{`import {CodeBlock} from '@components/ui/code-block'
+          <CodeBlock lang="tsx">
+            {`import {CodeBlock} from '@components/ui/code-block'
 
 // collapse(1:6)
 export default function Page() {
@@ -70,11 +74,13 @@ export default function Page() {
       <CodeBlock lang="tsx">{\`<div>foo</div>\`}</CodeBlock>
     </main>
   )
-}`}</CodeBlock>
+}`}
+          </CodeBlock>
         </Box>
         <Box data-theme="light">
           <Heading is="h3">Light Theme:</Heading>
-          <CodeBlock lang="tsx">{`import {CodeBlock} from '@components/ui/code-block'
+          <CodeBlock lang="tsx">
+            {`import {CodeBlock} from '@components/ui/code-block'
 
 export default function Page() {
   return (
@@ -82,7 +88,8 @@ export default function Page() {
       <CodeBlock lang="tsx">{\`<div>foo</div>\`}</CodeBlock>
     </main>
   )
-}`}</CodeBlock>
+}`}
+          </CodeBlock>
         </Box>
       </Example>
       <Example title="Inline Code">
@@ -160,5 +167,5 @@ export default function Page() {
         />
       </Example>
     </Stack>
-  )
+  );
 }

@@ -3,13 +3,13 @@
 import * as React from 'react'
 import Link, { LinkProps } from 'next/link'
 import { useRouter, usePathname } from 'next/navigation'
-import { cn } from 'feijoa-ui/cn'
+import { cn } from 'feijoa-ui'
 
-import { Button } from 'feijoa-ui/button'
-import { ScrollArea } from 'feijoa-ui/scroll-area'
-import { Sheet, SheetContent, SheetTrigger } from 'feijoa-ui/sheet'
+import { Button } from 'feijoa-ui'
+import { ScrollArea } from 'feijoa-ui'
+import { Sheet, SheetContent, SheetTrigger } from 'feijoa-ui'
 import { Citrus, FlaskConical, HardHat, MenuSquare } from 'lucide-react'
-import { ThemeToggle } from 'feijoa-ui/theme-toggle'
+import { ThemeToggle } from 'feijoa-ui'
 
 export function SmallNav() {
   const [open, setOpen] = React.useState(false)

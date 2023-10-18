@@ -1,4 +1,4 @@
-import { ThemeToggle } from 'feijoa-ui/theme-toggle'
+import { ThemeToggle } from 'feijoa-ui'
 import type { ReactNode } from 'react'
 import {
   NavigationMenu,
@@ -7,12 +7,12 @@ import {
   NavigationMenuLink,
   NavigationMenuTrigger,
   NavigationMenuContent,
-} from 'feijoa-ui/navigation-menu'
+} from 'feijoa-ui'
 import { HardHat, FlaskConical, Citrus } from 'lucide-react'
-import { Heading } from 'feijoa-ui/heading'
+import { Heading } from 'feijoa-ui'
 import NextLink, { LinkProps } from 'next/link'
-import { cn } from 'feijoa-ui/cn'
-import { Container } from 'feijoa-ui/container'
+import { cn } from 'feijoa-ui'
+import { Container } from 'feijoa-ui'
 
 interface ListItemProps extends Omit<LinkProps<string>, 'title'> {
   className?: string

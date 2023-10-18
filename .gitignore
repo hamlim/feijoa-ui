@@ -38,3 +38,4 @@ yarn-error.log*
 dist/
 node_modules/
 tsconfig.tsbuildinfo
+dist-types/

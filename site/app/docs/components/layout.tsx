@@ -1,7 +1,4 @@
-import { Container } from 'feijoa-ui/container'
-import { ListItem } from 'feijoa-ui/list'
-import { Box } from 'feijoa-ui/box'
-import { cn } from 'feijoa-ui/cn'
+import { Container, ListItem, Box, cn } from 'feijoa-ui'
 
 function Layout({ children }) {
   return <div className="grid grid-cols-12">{children}</div>

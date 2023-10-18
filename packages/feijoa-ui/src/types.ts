@@ -1,4 +1,4 @@
-import type { Component, ComponentProps, JSX, ReactNode } from "react";
+import type { Component, ComponentPropsWithoutRef, JSX, ReactNode } from "react";
 
 type JSXElementConstructor<P> =
   | ((
@@ -16,6 +16,6 @@ type JSXElementConstructor<P> =
     deprecatedLegacyContext?: any,
   ) => Component<any, any>);
 
-export type GenericHTMLElementProps = ComponentProps<
+export type GenericHTMLElementProps = ComponentPropsWithoutRef<
   keyof JSX.IntrinsicElements | JSXElementConstructor<any>
 >;

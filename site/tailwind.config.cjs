@@ -8,7 +8,7 @@ module.exports = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-    path.join(path.dirname(require.resolve('feijoa-ui')), '/**/*.{ts,tsx}'),
+    path.join(path.dirname(require.resolve('feijoa-ui')), '**/*.js'),
 	],
   theme: {
     container: {

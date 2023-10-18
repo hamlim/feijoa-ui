@@ -10,10 +10,10 @@ export function FootnoteRef({ id }: {id: string}) {
   )
 }
 
-export function Footnote({ ref, children }: {ref: string, children: ReactNode}) {
+export function Footnote({ id, children }: {id: string, children: ReactNode}) {
   return (
-    <Box id={`fn-${ref}`} className="target:ring-2 p-2">
-      <BaseLink href={`#ref-${ref}`}>[{ref}]</BaseLink> - {children}
+    <Box id={`fn-${id}`} className="target:ring-2 p-2">
+      <BaseLink href={`#ref-${id}`}>[{id}]</BaseLink> - {children}
     </Box>
   )
 }

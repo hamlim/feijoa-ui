@@ -1,9 +1,8 @@
 {
   "name": "feijoa-ui",
   "version": "0.0.1",
-  "types": "./src/index.ts",
-  "main": "./src/index.ts",
-  "type": "module",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
   "repository": {
     "url": "git@github.com:hamlim/feijoa-ui.git",
     "directory": "packages/feijoa-ui"
@@ -11,7 +10,9 @@
   "author": "Matt Hamlin <matthewjameshamlin@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "buildx": "rm -rf ./dist/ && tsc --outDir ./dist",
+    "prebuild": "rm -rf ./dist",
+    "build": "swc ./src -d ./dist",
+    "postbuild": "tsc",
     "test-watch": "bun test --watch",
     "test-cov": "bun test --coverage",
     "pub": "npm publish --access public"
@@ -61,8 +62,20 @@
     "react-dom": "*"
   },
   "exports": {
-    ".": "./src/index.ts",
-    "./*": "./src/*"
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./*": {
+      "import": "./dist/*",
+      "require": "./dist/*",
+      "types": "./dist/*.d.ts"
+    },
+    "./dist/*.js": {
+      "import": "./dist/*.js",
+      "require": "./dist/*.js"
+    }
   },
   "publishConfig": {
     "access": "public",

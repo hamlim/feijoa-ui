@@ -60,8 +60,8 @@
     "class-variance-authority": "0.7.0",
     "react-day-picker": "8.9.1",
     "bright": "0.8.4",
-    "react": "*",
-    "react-dom": "*"
+    "react": "experimental",
+    "react-dom": "experimental"
   },
   "exports": {
     ".": {

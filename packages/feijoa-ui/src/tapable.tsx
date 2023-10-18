@@ -1,3 +1,6 @@
+/// <reference lib="dom" />
+/// <reference lib="dom.iterable" />
+
 'use client'
 import { forwardRef, useEffect, useCallback, useState } from 'react'
 import { Box } from './box'

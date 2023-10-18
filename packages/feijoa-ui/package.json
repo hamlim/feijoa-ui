@@ -1,7 +1,6 @@
 {
   "name": "feijoa-ui",
   "version": "0.0.1",
-  "types": "dist/index.d.ts",
   "repository": {
     "url": "git@github.com:hamlim/feijoa-ui.git",
     "directory": "packages/feijoa-ui"
@@ -9,19 +8,21 @@
   "author": "Matt Hamlin <matthewjameshamlin@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "build-types": "tsc",
     "test-watch": "bun test --watch",
     "test-cov": "bun test --coverage",
-    "pub": "npm publish --access public",
-    "tsc": "tsc --noEmit"
+    "pub": "npm publish --access public"
   },
   "devDependencies": {
     "react": "*",
     "react-dom": "*",
     "react-is": "*",
-    "typescript": "5.2.2"
+    "typescript": "5.2.2",
+    "@ds-pack/use-refs": "1.0.0"
   },
   "peerDependencies": {
     "clsx": "2.0.0",
+    "@ds-pack/use-refs": "1.0.0",
     "tailwind-merge": "1.14.0",
     "@radix-ui/react-accordion": "1.1.2",
     "@radix-ui/react-alert-dialog": "1.0.4",

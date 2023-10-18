@@ -1,3 +1,6 @@
+/// <reference lib="dom" />
+/// <reference lib="dom.iterable" />
+
 'use client'
 import { ReactNode, useEffect, useLayoutEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
@@ -11,7 +14,7 @@ let useIsomorphicEffect =
   typeof window !== 'undefined' ? useLayoutEffect : useEffect
 
 export function usePortal({ children, isOpen }: PortalProps) {
-  let [element, setElement] = useState(null)
+  let [element, setElement] = useState<HTMLDivElement | null>(null)
 
   useIsomorphicEffect(() => {
     let element = document.body.appendChild(document.createElement('div'))

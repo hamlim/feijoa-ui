@@ -1,8 +1,28 @@
 {
   "compilerOptions": {
+    // add Bun type definitions
     "types": ["bun-types"],
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "esModuleInterop": true,
-    "jsx": "react-jsx"
+
+    // enable latest features
+    "lib": ["ESNext", "DOM"],
+    "module": "esnext",
+    "target": "esnext",
+
+    // if TS 5.x+
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "moduleDetection": "force",
+
+    "jsx": "react-jsx", // support JSX
+    "allowJs": true, // allow importing `.js` from `.ts`
+
+    // best practices
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "composite": true,
+    "downlevelIteration": true,
+    "allowSyntheticDefaultImports": true
   }
 }

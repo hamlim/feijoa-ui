@@ -12,7 +12,8 @@
     "build:site": "turbo run build --filter feijoa-ui-site --output-logs=new-only",
     "build:lib": "turbo run build --filter feijoa-ui --output-logs=new-only",
     "build:cli": "turbo run build --filter @feijoa-ui/cli --output-logs=new-only",
-    "pub": "cd ./packages/feijoa-ui && bun run pub"
+    "pub:lib": "cd ./packages/feijoa-ui && bun run pub",
+    "pub:cli": "cd ./packages/cli && bun run pub"
   },
   "dependencies": {
     "react": "experimental",

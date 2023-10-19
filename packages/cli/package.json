@@ -1,6 +1,6 @@
 {
   "name": "@feijoa-ui/cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "bin": {
     "feijoa-ui": "./bin/index"
   },

@@ -28,7 +28,7 @@
       "@lib/*": ["./lib/*"],
       "@styles/*": ["./styles/*"],
       "@components/*": ["./components/*"]
-    },
+    }
   },
   "exclude": [
     "node_modules"

@@ -30,7 +30,7 @@ export * from "./input";
 export * from "./label";
 export * from "./link";
 export * from "./list";
-export * as mdxComnponents from "./mdx-components";
+export * as mdxComponents from "./mdx-components";
 export * from "./menubar";
 export * from "./navigation-menu";
 export * from "./popover";

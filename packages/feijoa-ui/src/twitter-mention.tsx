@@ -1,8 +1,8 @@
-import { GenericHTMLElementProps } from './types'
-import { BaseLink } from './link'
+import { BaseLink } from "./link";
+import { GenericHTMLElementProps } from "./types";
 
 interface Props extends GenericHTMLElementProps {
-  children: string
+  children: string;
 }
 
 export function TwitterMention(props: Props) {
@@ -14,5 +14,5 @@ export function TwitterMention(props: Props) {
       rel="nooperner noreferrer"
       {...props}
     />
-  )
+  );
 }

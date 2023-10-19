@@ -1,5 +1,5 @@
-import { LargeNav } from '../components/site/LargeNav'
-import { SmallNav } from '../components/site/SmallNav'
+import { LargeNav } from "../components/site/LargeNav";
+import { SmallNav } from "../components/site/SmallNav";
 
 export function Nav() {
   return (
@@ -7,5 +7,5 @@ export function Nav() {
       <SmallNav />
       <LargeNav />
     </>
-  )
+  );
 }

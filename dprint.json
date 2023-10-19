@@ -21,6 +21,7 @@
   ],
   "includes": [
     "site/next.config.mjs",
-    "packages/feijoa-ui/.swcrc"
+    "packages/feijoa-ui/.swcrc",
+    "**/*.{ts,tsx,js,md,json}"
   ]
 }

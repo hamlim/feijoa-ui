@@ -1,4 +1,4 @@
-import { Box } from './box'
+import { Box } from "./box";
 
 export function TLDR(props: { children: React.ReactNode }) {
   return (
@@ -14,5 +14,5 @@ export function TLDR(props: { children: React.ReactNode }) {
       </summary>
       {props.children}
     </Box>
-  )
+  );
 }

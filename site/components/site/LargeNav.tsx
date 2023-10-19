@@ -1,23 +1,23 @@
-import { ThemeToggle } from 'feijoa-ui'
-import type { ReactNode } from 'react'
+import { ThemeToggle } from "feijoa-ui";
 import {
   NavigationMenu,
-  NavigationMenuList,
+  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
+  NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuContent,
-} from 'feijoa-ui'
-import { HardHat, FlaskConical, Citrus } from 'lucide-react'
-import { Heading } from 'feijoa-ui'
-import NextLink, { LinkProps } from 'next/link'
-import { cn } from 'feijoa-ui'
-import { Container } from 'feijoa-ui'
+} from "feijoa-ui";
+import { Heading } from "feijoa-ui";
+import { cn } from "feijoa-ui";
+import { Container } from "feijoa-ui";
+import { Citrus, FlaskConical, HardHat } from "lucide-react";
+import NextLink, { LinkProps } from "next/link";
+import type { ReactNode } from "react";
 
-interface ListItemProps extends Omit<LinkProps<string>, 'title'> {
-  className?: string
-  title: ReactNode
-  children: ReactNode
+interface ListItemProps extends Omit<LinkProps<string>, "title"> {
+  className?: string;
+  title: ReactNode;
+  children: ReactNode;
 }
 
 function ListItem({
@@ -32,7 +32,7 @@ function ListItem({
       <NavigationMenuLink asChild>
         <NextLink
           className={cn(
-            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
             className,
           )}
           href={href}
@@ -45,7 +45,7 @@ function ListItem({
         </NextLink>
       </NavigationMenuLink>
     </li>
-  )
+  );
 }
 
 export function LargeNav() {
@@ -77,8 +77,7 @@ export function LargeNav() {
                       </NextLink>
                     </li>
                     <ListItem href="/docs" title="Introduction">
-                      Re-usable components built using shadcn/ui, Radix UI and
-                      Tailwind CSS.
+                      Re-usable components built using shadcn/ui, Radix UI and Tailwind CSS.
                     </ListItem>
                     <ListItem href="/docs/installation" title="Installation">
                       How to install dependencies and structure your app.
@@ -130,5 +129,5 @@ export function LargeNav() {
         <ThemeToggle />
       </Container>
     </div>
-  )
+  );
 }

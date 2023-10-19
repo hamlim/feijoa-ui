@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from "react";
 
 declare global {
   namespace JSX {
@@ -6,7 +6,7 @@ declare global {
       marquee: React.DetailedHTMLProps<
         React.HTMLAttributes<HTMLElement>,
         HTMLElement
-      >
+      >;
     }
   }
 }

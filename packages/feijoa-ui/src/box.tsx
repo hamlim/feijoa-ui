@@ -1,10 +1,10 @@
-import { GenericHTMLElementProps } from './types'
-import { ComponentType } from 'react'
+import { ComponentType } from "react";
+import { GenericHTMLElementProps } from "./types";
 
 interface Props extends GenericHTMLElementProps {
-  is?: string | ComponentType<GenericHTMLElementProps>
+  is?: string | ComponentType<GenericHTMLElementProps>;
 }
 
-export function Box({ is: El = 'div', ...props }: Props) {
-  return <El {...props} />
+export function Box({ is: El = "div", ...props }: Props) {
+  return <El {...props} />;
 }

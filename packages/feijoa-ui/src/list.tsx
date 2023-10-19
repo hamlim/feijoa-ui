@@ -1,28 +1,28 @@
-import { cn } from './cn'
-import { Box } from './box'
-import type { GenericHTMLElementProps } from './types'
+import { Box } from "./box";
+import { cn } from "./cn";
+import type { GenericHTMLElementProps } from "./types";
 
 interface ListProps extends GenericHTMLElementProps {
-  is?: 'ul' | 'ol'
+  is?: "ul" | "ol";
 }
 
-export function List({ is = 'ul', ...props }: ListProps) {
+export function List({ is = "ul", ...props }: ListProps) {
   return (
     <Box
       is={is}
       {...props}
       className={cn(
-        'my-6 ml-6 [&>li]:mt-2',
-        is === 'ul' && 'list-disc',
-        is === 'ol' && 'list-decimal',
+        "my-6 ml-6 [&>li]:mt-2",
+        is === "ul" && "list-disc",
+        is === "ol" && "list-decimal",
         props.className,
       )}
     />
-  )
+  );
 }
 
 interface ListItemProps extends GenericHTMLElementProps {}
 
 export function ListItem(props: ListItemProps) {
-  return <Box is="li" {...props} />
+  return <Box is="li" {...props} />;
 }

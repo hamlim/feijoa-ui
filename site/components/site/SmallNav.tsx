@@ -1,19 +1,19 @@
-'use client'
+"use client";
 
-import * as React from 'react'
-import Link, { LinkProps } from 'next/link'
-import { useRouter, usePathname } from 'next/navigation'
-import { cn } from 'feijoa-ui'
+import { cn } from "feijoa-ui";
+import Link, { LinkProps } from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import * as React from "react";
 
-import { Button } from 'feijoa-ui'
-import { ScrollArea } from 'feijoa-ui'
-import { Sheet, SheetContent, SheetTrigger } from 'feijoa-ui'
-import { Citrus, FlaskConical, HardHat, MenuSquare } from 'lucide-react'
-import { ThemeToggle } from 'feijoa-ui'
+import { Button } from "feijoa-ui";
+import { ScrollArea } from "feijoa-ui";
+import { Sheet, SheetContent, SheetTrigger } from "feijoa-ui";
+import { ThemeToggle } from "feijoa-ui";
+import { Citrus, FlaskConical, HardHat, MenuSquare } from "lucide-react";
 
 export function SmallNav() {
-  const [open, setOpen] = React.useState(false)
-  let pathname = usePathname()
+  const [open, setOpen] = React.useState(false);
+  let pathname = usePathname();
 
   return (
     <div className="md:hidden border-b-[1px] border-slate-400 border-solid">
@@ -32,8 +32,8 @@ export function SmallNav() {
             <MobileLink
               href="/"
               className={cn(
-                pathname === '/' && 'font-bold text-slate-400',
-                'flex items-center',
+                pathname === "/" && "font-bold text-slate-400",
+                "flex items-center",
               )}
               onOpenChange={setOpen}
             >
@@ -44,31 +44,25 @@ export function SmallNav() {
               <div className="flex flex-col space-y-3">
                 <MobileLink
                   href="/docs"
-                  className={
-                    pathname === '/docs' ? 'font-bold text-slate-400' : ''
-                  }
+                  className={pathname === "/docs" ? "font-bold text-slate-400" : ""}
                   onOpenChange={setOpen}
                 >
                   Introduction
                 </MobileLink>
                 <MobileLink
                   href="/docs/installation"
-                  className={
-                    pathname === '/docs/installation'
-                      ? 'font-bold text-slate-400'
-                      : ''
-                  }
+                  className={pathname === "/docs/installation"
+                    ? "font-bold text-slate-400"
+                    : ""}
                   onOpenChange={setOpen}
                 >
                   Installation
                 </MobileLink>
                 <MobileLink
                   href="/docs/components"
-                  className={
-                    pathname === '/docs/components'
-                      ? 'font-bold text-slate-400'
-                      : ''
-                  }
+                  className={pathname === "/docs/components"
+                    ? "font-bold text-slate-400"
+                    : ""}
                   onOpenChange={setOpen}
                 >
                   Components
@@ -90,8 +84,7 @@ export function SmallNav() {
                     onOpenChange={setOpen}
                     className="text-muted-foreground"
                   >
-                    <FlaskConical className="h-5 w-5  inline-flex mr-2" />{' '}
-                    Kitchen Sink
+                    <FlaskConical className="h-5 w-5  inline-flex mr-2" /> Kitchen Sink
                   </MobileLink>
                 </div>
               </div>
@@ -102,13 +95,13 @@ export function SmallNav() {
         <h1 className="font-bold">Feijoa UI</h1>
       </div>
     </div>
-  )
+  );
 }
 
 interface MobileLinkProps extends LinkProps<string> {
-  onOpenChange?: (open: boolean) => void
-  children: React.ReactNode
-  className?: string
+  onOpenChange?: (open: boolean) => void;
+  children: React.ReactNode;
+  className?: string;
 }
 
 function MobileLink({
@@ -118,19 +111,19 @@ function MobileLink({
   children,
   ...props
 }: MobileLinkProps) {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <Link
       href={href}
       onClick={() => {
         // @ts-expect-error - doesn't play nicely with typed routes at the moment
-        router.push(href)
-        onOpenChange?.(false)
+        router.push(href);
+        onOpenChange?.(false);
       }}
       className={cn(className)}
       {...props}
     >
       {children}
     </Link>
-  )
+  );
 }

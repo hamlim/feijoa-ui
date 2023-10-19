@@ -1,11 +1,11 @@
-import './globals.css'
-import { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import { ThemeProvider } from 'feijoa-ui'
-import { Nav } from './Nav'
-import { Toaster } from 'feijoa-ui'
+import "./globals.css";
+import { ThemeProvider } from "feijoa-ui";
+import { Toaster } from "feijoa-ui";
+import { Metadata } from "next";
+import { Inter } from "next/font/google";
+import { Nav } from "./Nav";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Layout({ children }) {
   return (
@@ -23,48 +23,48 @@ export default function Layout({ children }) {
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }
 
 export let metadata: Metadata = {
   title: {
-    default: 'Feijoa UI',
+    default: "Feijoa UI",
     template: `%s - Feijoa UI`,
   },
-  description: 'A barebones UI component recipe-kit!',
+  description: "A barebones UI component recipe-kit!",
   keywords: [
-    'Next.js',
-    'React',
-    'Tailwind CSS',
-    'React Server Components',
-    'Radix UI',
-    'Lucide Icons',
-    'shadcn/ui',
+    "Next.js",
+    "React",
+    "Tailwind CSS",
+    "React Server Components",
+    "Radix UI",
+    "Lucide Icons",
+    "shadcn/ui",
   ],
   authors: [
     {
-      name: 'Matt Hamlin',
-      url: 'https://matthamlin.me',
+      name: "Matt Hamlin",
+      url: "https://matthamlin.me",
     },
   ],
-  creator: 'Matt Hamlin',
+  creator: "Matt Hamlin",
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://feijoa-ui.vercel.app',
-    title: 'Feijoa UI',
-    description: 'A barebones UI component recipe-kit!',
-    siteName: 'Feijoa UI',
+    type: "website",
+    locale: "en_US",
+    url: "https://feijoa-ui.vercel.app",
+    title: "Feijoa UI",
+    description: "A barebones UI component recipe-kit!",
+    siteName: "Feijoa UI",
     images: [
       {
-        url: 'https://feijoa-ui.vercel.app/icon-512.png',
+        url: "https://feijoa-ui.vercel.app/icon-512.png",
         width: 512,
         height: 512,
-        alt: 'Feijoa UI: A barebones UI component recipe-kit!',
+        alt: "Feijoa UI: A barebones UI component recipe-kit!",
       },
     ],
     // images: [
@@ -77,17 +77,17 @@ export let metadata: Metadata = {
     // ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Feijoa UI',
-    description: 'A barebones UI component recipe-kit!',
-    images: ['https://feijoa-ui.vercel.app/icon-512.png'],
+    card: "summary_large_image",
+    title: "Feijoa UI",
+    description: "A barebones UI component recipe-kit!",
+    images: ["https://feijoa-ui.vercel.app/icon-512.png"],
     // images: [siteConfig.ogImage],
-    creator: '@immatthamlin',
+    creator: "@immatthamlin",
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: "/favicon.ico",
     // shortcut: '/favicon-16x16.png',
     // apple: '/apple-touch-icon.png',
   },
   manifest: `https://feijoa-ui.vercel.app/site.webmanifest`,
-}
+};

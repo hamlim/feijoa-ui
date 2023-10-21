@@ -1,10 +1,9 @@
 {
   "name": "feijoa-ui-monorepo",
+  "dependencies": {
+    "turbo": "^1.10.16"
+  },
   "private": true,
-  "workspaces": [
-    "packages/*",
-    "site"
-  ],
   "scripts": {
     "dev": "cd ./site && bun run dev",
     "format": "dprint fmt",
@@ -15,15 +14,8 @@
     "pub:lib": "cd ./packages/feijoa-ui && bun run pub",
     "pub:cli": "cd ./packages/cli && bun run pub"
   },
-  "dependencies": {
-    "react": "experimental",
-    "react-dom": "experimental"
-  },
-  "resolutions": {
-    "react": "experimental",
-    "react-dom": "experimental"
-  },
-  "devDependencies": {
-    "turbo": "^1.10.15"
-  }
+  "workspaces": [
+    "packages/*",
+    "site"
+  ]
 }

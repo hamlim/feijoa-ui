@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "bun-types": "^1.0.3",
-    "typescript": "^5.2.2"
+    "typescript": "latest"
   },
   "dependencies": {
     "kleur": "4.1.5"

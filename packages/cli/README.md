@@ -23,3 +23,11 @@ npm install @feijoa-ui/cli
 ## Usage:
 
 > TODO - WIP!
+
+## Development
+
+The `local.ts` file can be used to run the CLI with any local changes:
+
+```sh
+bun ./packages/cli/local.ts <args...>
+```

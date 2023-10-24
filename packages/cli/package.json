@@ -4,6 +4,7 @@
   "bin": {
     "feijoa-ui": "./bin/index"
   },
+  "types": "./types.d.ts",
   "repository": {
     "url": "git@github.com:hamlim/feijoa-ui.git",
     "directory": "packages/cli"

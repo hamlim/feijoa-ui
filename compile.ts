@@ -1,48 +1,36 @@
 import { execSync } from "child_process";
 import { readdir, readFile, writeFile } from "fs/promises";
 import path from "path";
+import type { RecipesMetadata } from "./packages/cli/types";
 
-let componentsDir = "./packages/feijoa-ui/src/";
+let recipesDir = "./packages/feijoa-ui/src/";
 
-let dir = await readdir(componentsDir);
+let dir = await readdir(recipesDir);
 
 dir = dir.filter((hunk) => path.extname(hunk));
 
-type Metadata = {
-  version: string;
-  components: Array<{
-    name: string;
-    paths: {
-      relative: string;
-      absolute: string;
-      github: string;
-    };
-    content: string;
-  }>;
-};
-
-let metadata: Metadata = {
+let metadata: RecipesMetadata = {
   version: execSync(`git rev-parse HEAD`).toString().replace("\n", ""),
-  components: [],
+  recipes: [],
 };
 
-for (let componentFileName of dir) {
-  let extension = path.extname(componentFileName);
+for (let recipeFileName of dir) {
+  let extension = path.extname(recipeFileName);
 
-  metadata.components.push({
-    name: componentFileName.replace(extension, ""),
+  metadata.recipes.push({
+    name: recipeFileName.replace(extension, ""),
     paths: {
-      relative: `${componentsDir}${componentFileName}`,
-      absolute: `${componentsDir.replace("./", "")}${componentFileName}`,
+      relative: `${recipesDir}${recipeFileName}`,
+      absolute: `${recipesDir.replace("./", "")}${recipeFileName}`,
       github: `https://raw.githubusercontent.com/hamlim/feijoa-ui/main/${
-        componentsDir.replace(
+        recipesDir.replace(
           "./",
           "",
         )
-      }${componentFileName}`,
+      }${recipeFileName}`,
     },
     content: (
-      await readFile(path.join(componentsDir, componentFileName))
+      await readFile(path.join(recipesDir, recipeFileName))
     ).toString(),
   });
 }

@@ -12,10 +12,12 @@
     "build:lib": "turbo run build --filter feijoa-ui --output-logs=new-only",
     "build:cli": "turbo run build --filter @feijoa-ui/cli --output-logs=new-only",
     "pub:lib": "cd ./packages/feijoa-ui && bun run pub",
-    "pub:cli": "cd ./packages/cli && bun run pub"
+    "pub:cli": "cd ./packages/cli && bun run pub",
+    "example-cli": "cd ./example && bun run fu"
   },
   "workspaces": [
     "packages/*",
-    "site"
+    "site",
+    "example"
   ]
 }

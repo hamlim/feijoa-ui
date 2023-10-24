@@ -24,6 +24,8 @@ import {
   Text,
 } from "feijoa-ui";
 
+export const dynamic = "force-dynamic";
+
 function Example({ title, children }) {
   return (
     <Container>

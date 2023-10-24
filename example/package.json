@@ -1,0 +1,18 @@
+{
+  "name": "example",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "latest",
+    "@feijoa-ui/cli": "workspace:*"
+  },
+  "scripts": {
+    "fu": "feijoa-ui"
+  },
+  "dependencies": {
+    "next": "13.5.7-canary.19"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

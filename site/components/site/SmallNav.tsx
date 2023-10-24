@@ -1,14 +1,15 @@
 "use client";
 
-import { cn } from "feijoa-ui";
+// import { Button } from "feijoa-ui/button";
+// import { cn } from "feijoa-ui/cn";
+// import { ScrollArea } from "feijoa-ui/scroll-area";
+// import { Sheet, SheetContent, SheetTrigger } from "feijoa-ui/sheet";
+// import { ThemeToggle } from "feijoa-ui/theme-toggle";
+import { Button, cn, ScrollArea, Sheet, SheetContent, SheetTrigger, ThemeToggle } from "feijoa-ui";
 import Link, { LinkProps } from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import * as React from "react";
 
-import { Button } from "feijoa-ui";
-import { ScrollArea } from "feijoa-ui";
-import { Sheet, SheetContent, SheetTrigger } from "feijoa-ui";
-import { ThemeToggle } from "feijoa-ui";
 import { Citrus, FlaskConical, HardHat, MenuSquare } from "lucide-react";
 
 export function SmallNav() {

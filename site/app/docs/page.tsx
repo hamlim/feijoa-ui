@@ -1,5 +1,7 @@
 import { Box, Container, Link, Text } from "feijoa-ui";
 
+export const dynamic = "force-dynamic";
+
 export default function Docs() {
   return (
     <Container className="max-w-prose">

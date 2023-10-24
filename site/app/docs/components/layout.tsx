@@ -1,5 +1,7 @@
 import { Box, cn, Container, ListItem } from "feijoa-ui";
 
+export const dynamic = "force-dynamic";
+
 function Layout({ children }) {
   return <div className="grid grid-cols-12">{children}</div>;
 }

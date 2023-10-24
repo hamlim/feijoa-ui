@@ -1,3 +1,4 @@
+import "./utils/console-table-shim";
 import { exists, mkdir, readFile, writeFile } from "fs/promises";
 import k from "kleur";
 import path from "node:path";
@@ -421,7 +422,15 @@ module.exports = {
   let pitfile = path.join(config.rootPath, "feijoa-ui", ".pit");
   let pit: Pit;
   try {
-    pit = JSON.parse((await readFile(pitfile)).toString());
+    if (args["--debug"]) {
+      console.log(k.gray(`Pit path: ${pitfile}`));
+    }
+    let pitStr = (await readFile(pitfile)).toString();
+    if (args["--debug"]) {
+      console.log(k.gray(`Pit contents: `));
+      console.log(k.gray(pitStr));
+    }
+    pit = JSON.parse(pitStr);
   } catch (e) {
     console.log(`Failed to load feijoa-ui/.pit file!
 
@@ -441,12 +450,12 @@ This file shouldn't be deleted, assuming no known recipes are installed!`);
       }
 
       let availableRecipes = metadataCache.recipes.map(recipe => recipe.name);
-      let installedRecipes = pit.recipes;
+      let installedRecipes = pit.recipes || {};
 
       let table = [...availableRecipes, ...Object.keys(installedRecipes)].reduce((acc, recipeName) => ({
         ...acc,
         [recipeName]: {
-          installed: installedRecipes[recipeName],
+          installed: !!installedRecipes[recipeName],
         },
       }), {});
 
@@ -474,5 +483,5 @@ Looked in: ${path.dirname(configPath)} for 'feijoa-ui.config.ts' file but found 
 Add a config file (via 'feijoa-ui setup') or pass in a --config-path to the cli!`);
     return;
   }
-  return import(configPath);
+  return (await import(configPath)).default;
 }

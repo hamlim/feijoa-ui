@@ -1,6 +1,12 @@
 {
   "$schema": "https://json.schemastore.org/swcrc",
   "jsc": {
+    "paths": {
+      "@recipes/*": [
+        "./*"
+      ]
+    },
+    "baseUrl": "./src",
     "parser": {
       "syntax": "typescript",
       "dynamicImport": false,

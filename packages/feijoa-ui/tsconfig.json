@@ -8,6 +8,12 @@
     "module": "ESNext",
     "target": "ESNext",
 
+    "paths": {
+      "@recipes/*": [
+        "./src/*"
+      ]
+    },
+
     // if TS 5.x+
     "rootDir": "./src",
     "outDir": "./dist",

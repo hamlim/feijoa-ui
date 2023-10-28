@@ -1,7 +1,6 @@
-import { BaseLink } from "./link";
-import { GenericHTMLElementProps } from "./types";
+import { BaseLink } from "@recipes/link";
 
-interface Props extends GenericHTMLElementProps {
+interface Props {
   children: string;
 }
 

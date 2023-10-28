@@ -13,6 +13,7 @@
   "license": "MIT",
   "scripts": {
     "build": "bun build ./src/index.ts --compile --minify --outfile ./bin/index",
+    "watch": "bun build ./src/index.ts --compile --minify --watch --outfile ./bin/index",
     "pub": "npm publish --access public"
   },
   "devDependencies": {

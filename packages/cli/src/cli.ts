@@ -20,7 +20,7 @@ type Pit = {
   };
 };
 
-type Cmd = "help" | "download" | "update" | "diff" | "list" | "init-config" | "setup";
+type Cmd = "help" | "add" | "update" | "diff" | "list" | "init-config" | "setup";
 
 export default async function cli() {
   let argv = process.argv.slice(2);
@@ -49,7 +49,7 @@ export default async function cli() {
   if (!cmd) {
     console.log(`feijoa-ui called without a valid command, the supported commands are:
 - help
-- download
+- add
 - update
 - diff
 - list
@@ -93,31 +93,7 @@ You provided the following arguments: ${argv.join(" ")}`);
       );
       return;
     }
-    //     case "init-config": {
-    //       if (!args["--silent"]) {
-    //         console.log(`Creating feijoa-ui.config.ts file with defaults in current working directory, defaults:
 
-    //   - rootPath: './'`);
-    //       }
-    //       try {
-    //         await writeFile(
-    //           path.join(process.cwd(), "feijoa-ui.config.ts"),
-    //           `import type { Config } from "@feijoa-ui/cli";
-
-    // export default {
-    //   rootPath: "./",
-    // } satisfies Config;
-    // `,
-    //         );
-    //       } catch (e) {
-    //         console.log(`Failed to create './feijoa-ui.config.ts' file, see below for the raw error:`);
-    //         console.log(e);
-    //         return;
-    //       }
-    //       if (!args["--silent"]) {
-    //         console.log(`Successfully created config file!`);
-    //       }
-    //     }
     case "setup": {
       if (!args["--silent"]) {
         console.log(`Setting up feijoa-ui locally. This command will do the following:
@@ -441,17 +417,13 @@ This file shouldn't be deleted, assuming no known recipes are installed!`);
   }
   // --- Pit ---
 
-  let metadataCache: RecipesMetadata;
+  let metadataCache = await (await fetch("https://feijoa-ui.vercel.app/api/recipes")).json() as RecipesMetadata;
+  let latestRecipeVersion = metadataCache.version;
+  let availableRecipes = metadataCache.recipes.map(recipe => recipe.name);
+  let installedRecipes = pit.recipes || {};
 
   switch (cmd) {
     case "list": {
-      if (!metadataCache) {
-        metadataCache = await (await fetch("https://feijoa-ui.vercel.app/api/recipes")).json() as RecipesMetadata;
-      }
-
-      let availableRecipes = metadataCache.recipes.map(recipe => recipe.name);
-      let installedRecipes = pit.recipes || {};
-
       let table = [...availableRecipes, ...Object.keys(installedRecipes)].reduce((acc, recipeName) => ({
         ...acc,
         [recipeName]: {
@@ -466,6 +438,22 @@ This file shouldn't be deleted, assuming no known recipes are installed!`);
         console.log(JSON.stringify(availableRecipes, null, 2));
       }
       return;
+    }
+    case "add": {
+      let recipesRequested = Object.keys(args).filter(arg => !arg.startsWith("--"));
+      let unknownRecipes = recipesRequested.filter(recipe => !availableRecipes.includes(recipe));
+      let knownRecipes = recipesRequested.filter(recipe => availableRecipes.includes(recipe));
+      if (!args["--silent"] && unknownRecipes.length) {
+        console.log(
+          `Attmpted to add the following recipes that aren't supported, check for typos and make sure the recipe exists by running \`feijoa-ui list\`!`,
+        );
+        unknownRecipes.forEach(recipe => console.log(`- ${recipe}`));
+        if (!knownRecipes.length) {
+          return;
+        } else {
+          console.log(`Adding recipes...`);
+        }
+      }
     }
   }
 }

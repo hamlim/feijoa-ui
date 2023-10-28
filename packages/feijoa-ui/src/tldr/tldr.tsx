@@ -1,4 +1,4 @@
-import { Box } from "./box";
+import { Box } from "@recipes/box";
 
 export function TLDR(props: { children: React.ReactNode }) {
   return (

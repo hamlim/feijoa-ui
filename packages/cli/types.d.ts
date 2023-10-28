@@ -28,5 +28,10 @@ export type RecipesMetadata = {
       github: string;
     };
     content: string;
+    dependencies: {
+      all: Array<string>;
+      internal: Array<string>;
+      external: Array<string>;
+    };
   }>;
 };

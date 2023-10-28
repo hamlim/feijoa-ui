@@ -1,8 +1,9 @@
+import { cn } from "@recipes/cn";
 import NextLink, { LinkProps } from "next/link";
-import { cn } from "./cn";
-import type { GenericHTMLElementProps } from "./types";
 
-interface BaseLinkProps extends GenericHTMLElementProps {}
+interface BaseLinkProps {
+  className?: string;
+}
 
 let linkClass = "font-medium text-primary underline underline-offset-4";
 

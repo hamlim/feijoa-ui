@@ -1,4 +1,4 @@
-import { cn } from "./cn";
+import { cn } from "@recipes/cn";
 
 function Skeleton({
   className,

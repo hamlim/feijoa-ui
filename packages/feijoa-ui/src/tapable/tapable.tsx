@@ -2,9 +2,8 @@
 /// <reference lib="dom.iterable" />
 
 "use client";
+import { Box } from "@recipes/box";
 import { forwardRef, useCallback, useEffect, useState } from "react";
-import { Box } from "./box";
-import type { GenericHTMLElementProps } from "./types";
 
 import { useSharedRef } from "@ds-pack/use-refs";
 
@@ -75,7 +74,7 @@ export function useTapable(
 
 export default useTapable;
 
-export interface TapableProps extends GenericHTMLElementProps {}
+export interface TapableProps extends UseTapableProps {}
 
 export let Tapable = forwardRef<any, TapableProps>(function Tapable(
   props: TapableProps,

@@ -1,6 +1,7 @@
 {
   "name": "feijoa-ui-monorepo",
   "dependencies": {
+    "@swc/core": "^1.3.95",
     "turbo": "^1.10.16"
   },
   "private": true,

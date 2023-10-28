@@ -1,6 +1,6 @@
+import { Box } from "@recipes/box";
+import { BaseLink } from "@recipes/link";
 import type { ReactNode } from "react";
-import { Box } from "./box";
-import { BaseLink } from "./link";
 
 export function FootnoteRef({ id }: { id: string }) {
   return (

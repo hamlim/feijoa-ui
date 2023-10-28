@@ -1,6 +1,6 @@
+import { Box } from "@recipes/box";
 import type { ReactNode } from "react";
 import { Tweet as ReactTweet, TweetContainer } from "react-tweet";
-import { Box } from "./box";
 
 interface Props {
   id: string;

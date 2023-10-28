@@ -1,7 +1,8 @@
-import { cn } from "./cn";
-import type { GenericHTMLElementProps } from "./types";
+import { cn } from "@recipes/cn";
 
-interface Props extends GenericHTMLElementProps {}
+interface Props {
+  className?: string;
+}
 
 export function Container(props: Props) {
   return <div {...props} className={cn("container", props.className)} />;

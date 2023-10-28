@@ -1,9 +1,9 @@
-import { Box } from "./box";
-import { cn } from "./cn";
-import type { GenericHTMLElementProps } from "./types";
+import { Box } from "@recipes/box";
+import { cn } from "@recipes/cn";
 
-interface ListProps extends GenericHTMLElementProps {
+interface ListProps {
   is?: "ul" | "ol";
+  className?: string;
 }
 
 export function List({ is = "ul", ...props }: ListProps) {

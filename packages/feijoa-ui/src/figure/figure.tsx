@@ -1,8 +1,8 @@
+import { AspectRatio } from "@recipes/aspect-ratio";
+import { cn } from "@recipes/cn";
+import { Text } from "@recipes/text";
 import NextImage from "next/image";
 import type { ReactNode } from "react";
-import { AspectRatio } from "./aspect-ratio";
-import { cn } from "./cn";
-import { Text } from "./text";
 
 type NextImageProps = Parameters<typeof NextImage>[0];
 

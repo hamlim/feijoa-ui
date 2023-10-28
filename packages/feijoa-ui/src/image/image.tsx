@@ -1,6 +1,6 @@
+import { AspectRatio } from "@recipes/aspect-ratio";
+import { cn } from "@recipes/cn";
 import NextImage from "next/image";
-import { AspectRatio } from "./aspect-ratio";
-import { cn } from "./cn";
 
 type ImageProps = React.ComponentPropsWithoutRef<typeof NextImage>;
 

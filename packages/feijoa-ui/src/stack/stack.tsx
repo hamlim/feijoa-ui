@@ -1,8 +1,8 @@
-import { cn } from "./cn";
-import type { GenericHTMLElementProps } from "./types";
+import { cn } from "@recipes/cn";
 
-interface Props extends GenericHTMLElementProps {
+interface Props {
   gap: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+  className?: string;
 }
 
 let gridClasses = {

@@ -1,8 +1,7 @@
 import { ComponentType } from "react";
-import { GenericHTMLElementProps } from "./types";
 
-interface Props extends GenericHTMLElementProps {
-  is?: string | ComponentType<GenericHTMLElementProps>;
+interface Props {
+  is?: string | ComponentType<{}>;
 }
 
 export function Box({ is: El = "div", ...props }: Props) {

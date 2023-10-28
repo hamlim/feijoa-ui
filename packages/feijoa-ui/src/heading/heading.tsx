@@ -1,8 +1,8 @@
-import { cn } from "./cn";
-import type { GenericHTMLElementProps } from "./types";
+import { cn } from "@recipes/cn";
 
-interface Props extends GenericHTMLElementProps {
+interface Props {
   is: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  className?: string;
 }
 
 let headingClassMap = {

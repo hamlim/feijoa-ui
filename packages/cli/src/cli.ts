@@ -452,6 +452,16 @@ This file shouldn't be deleted, assuming no known recipes are installed!`);
           return;
         } else {
           console.log(`Adding recipes...`);
+          // flatten requested recipes, e.g. user requested rec-a rec-b, but rec-b depends on rec-a and rec-c, final list should
+          // be rec-a rec-b, rec-c
+          let flattenedRecipes = new Set([
+            knownRecipes,
+            ...metadataCache.recipes.filter(rec => knownRecipes.includes(rec.name)).map(rec =>
+              rec.dependencies.internal
+            ).flat(Infinity),
+          ]);
+
+          console.log(flattenedRecipes);
         }
       }
     }

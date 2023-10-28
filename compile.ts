@@ -9,37 +9,30 @@ let dir = await readdir(recipesDir);
 
 dir = dir.filter((hunk) => !path.extname(hunk));
 
-console.log(dir);
+let metadata: RecipesMetadata = {
+  version: execSync(`git rev-parse HEAD`).toString().replace("\n", ""),
+  recipes: [],
+};
 
-// let metadata: RecipesMetadata = {
-//   version: execSync(`git rev-parse HEAD`).toString().replace("\n", ""),
-//   recipes: [],
-// };
+for (let recipeFileName of dir) {
+  let recipeConfigPath = path.join("./", recipesDir, recipeFileName, "recipe.json");
+  let recipeConfig = JSON.parse((await readFile(recipeConfigPath)).toString());
 
-// for (let recipeFileName of dir) {
-//   let extension = path.extname(recipeFileName);
+  metadata.recipes.push({
+    name: recipeFileName,
+    rootPaths: {
+      relative: path.join(recipesDir, recipeFileName),
+      absolute: path.join(recipesDir.replace("./", ""), recipeFileName),
+      github: `https://raw.githubusercontent.com/hamlim/feijoa-ui/main/${
+        recipesDir.replace(
+          "./",
+          "",
+        )
+      }${recipeFileName}`,
+    },
+    dependencies: recipeConfig.dependencies,
+    files: recipeConfig.files || [`./${recipeFileName}.tsx`],
+  });
+}
 
-//   let content = (
-//     await readFile(path.join(recipesDir, recipeFileName))
-//   ).toString();
-
-//   let deps = await parseImports(content);
-
-//   metadata.recipes.push({
-//     name: recipeFileName.replace(extension, ""),
-//     paths: {
-//       relative: `${recipesDir}${recipeFileName}`,
-//       absolute: `${recipesDir.replace("./", "")}${recipeFileName}`,
-//       github: `https://raw.githubusercontent.com/hamlim/feijoa-ui/main/${
-//         recipesDir.replace(
-//           "./",
-//           "",
-//         )
-//       }${recipeFileName}`,
-//     },
-//     content,
-//     dependencies: deps,
-//   });
-// }
-
-// writeFile(`./site/public/metadata.json`, JSON.stringify(metadata, null, 2));
+writeFile(`./site/public/metadata.json`, JSON.stringify(metadata, null, 2));

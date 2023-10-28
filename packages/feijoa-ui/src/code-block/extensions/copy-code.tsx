@@ -1,7 +1,7 @@
 "use client";
 import { ClipboardCopyIcon } from "lucide-react";
-import { Button } from "../button";
-import { useToast } from "../use-toast";
+import { Button } from "../../button";
+import { useToast } from "../../use-toast";
 
 interface Props {
   code: string;

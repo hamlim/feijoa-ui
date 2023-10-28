@@ -1,0 +1,10 @@
+{
+  "name": "code-block",
+  "dependencies": { "internal": ["button", "use-toast"], "external": ["bright", "lucide-react", "react"] },
+  "files": [
+    "./code-block.tsx",
+    "./extensions/collapse-extension.tsx",
+    "./extensions/collapse.tsx",
+    "./extensions/copy-code.tsx"
+  ]
+}

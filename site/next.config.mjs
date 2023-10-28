@@ -5,8 +5,8 @@ export default mdx()(
   {
     experimental: {
       typedRoutes: true,
-      optimizePackageImports: ["feijoa-ui"],
       mdxRs: true,
+      optimizePackageImports: ["feijoa-ui"],
     },
     // modularizeImports: {
     //   "feijoa-ui": {

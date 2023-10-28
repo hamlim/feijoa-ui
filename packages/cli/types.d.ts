@@ -22,11 +22,21 @@ export type RecipesMetadata = {
   version: string;
   recipes: Array<{
     name: string;
-    paths: {
+    rootPaths: {
       relative: string;
       absolute: string;
       github: string;
     };
-    content: string;
+    dependencies: RecipeConfig["dependencies"];
+    files: Array<string>;
   }>;
+};
+
+export type RecipeConfig = {
+  name: string;
+  dependencies: {
+    internal: Array<string>;
+    external: Array<string>;
+  };
+  files?: Array<string>;
 };

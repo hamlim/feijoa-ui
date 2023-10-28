@@ -1,0 +1,1 @@
+{"name":"toggle","dependencies":{"internal":["cn"],"external":["@radix-ui/react-toggle","class-variance-authority","react"]}}

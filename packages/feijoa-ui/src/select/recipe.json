@@ -1,0 +1,1 @@
+{"name":"select","dependencies":{"internal":["cn"],"external":["@radix-ui/react-select","lucide-react","react"]}}

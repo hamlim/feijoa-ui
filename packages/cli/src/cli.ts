@@ -3,6 +3,7 @@ import { exists, mkdir, readFile, writeFile } from "fs/promises";
 import k from "kleur";
 import path from "node:path";
 import type { Config, RecipesMetadata } from "../types";
+import { distilDependencies } from "./utils/distil-dependencies";
 import mergeDeep from "./utils/merge-deep";
 import stripJsonComments from "./utils/strip-json-comments";
 
@@ -454,24 +455,14 @@ This file shouldn't be deleted, assuming no known recipes are installed!`);
           console.log(`Adding recipes...`);
           // flatten requested recipes, e.g. user requested rec-a rec-b, but rec-b depends on rec-a and rec-c, final list should
           // be rec-a rec-b, rec-c
-          // let flattenedRecipes = new Set([
-          //   knownRecipes,
-          //   ...metadataCache.recipes.filter(rec => knownRecipes.includes(rec.name)).map(rec =>
-          //     rec.dependencies.internal
-          //   ).flat(Infinity),
-          // ]);
+          let { internalDependencies, externalDependencies } = distilDependencies({
+            recipes: knownRecipes,
+            metadataCache,
+          });
 
-          let nodes = metadataCache.recipes.filter(rec => knownRecipes.includes(rec.name));
-          let deps = [...knownRecipes];
-          do {
-            if (nodes[0].dependencies.internal.length) {
-              deps.push(...nodes[0].dependencies.internal);
-              nodes.push(...metadataCache.recipes.filter(rec => nodes[0].dependencies.internal.includes(rec.name)));
-            }
-            nodes.shift();
-          } while (nodes.length);
-
-          console.log(deps);
+          // Add external dependencies
+          // Fetch and save internal dependencies
+          // Update pit file
         }
       }
     }

@@ -21,8 +21,8 @@ for (let recipeFileName of dir) {
   metadata.recipes.push({
     name: recipeFileName,
     rootPaths: {
-      relative: path.join(recipesDir, recipeFileName),
-      absolute: path.join(recipesDir.replace("./", ""), recipeFileName),
+      relative: path.join(recipesDir, recipeFileName) + "/",
+      absolute: path.join(recipesDir.replace("./", ""), recipeFileName) + "/",
       github: `https://raw.githubusercontent.com/hamlim/feijoa-ui/main/${
         recipesDir.replace(
           "./",

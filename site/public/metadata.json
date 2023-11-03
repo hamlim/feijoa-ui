@@ -1,12 +1,12 @@
 {
-  "version": "4d5a63d9e555377fb584ee6da499e619f5e5dc04",
+  "version": "c32869f2be0c00504f063de2b617c9494bf001ad",
   "recipes": [
     {
       "name": "tapable",
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/tapable",
         "absolute": "packages/feijoa-ui/src/tapable",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/tapable"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/tapable/"
       },
       "dependencies": {
         "internal": [
@@ -26,7 +26,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/tabs",
         "absolute": "packages/feijoa-ui/src/tabs",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/tabs"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/tabs/"
       },
       "dependencies": {
         "internal": [
@@ -46,7 +46,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/tweet",
         "absolute": "packages/feijoa-ui/src/tweet",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/tweet"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/tweet/"
       },
       "dependencies": {
         "internal": [
@@ -66,7 +66,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/toaster",
         "absolute": "packages/feijoa-ui/src/toaster",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/toaster"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/toaster/"
       },
       "dependencies": {
         "internal": [
@@ -84,7 +84,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/form",
         "absolute": "packages/feijoa-ui/src/form",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/form"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/form/"
       },
       "dependencies": {
         "internal": [
@@ -107,7 +107,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/tooltip",
         "absolute": "packages/feijoa-ui/src/tooltip",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/tooltip"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/tooltip/"
       },
       "dependencies": {
         "internal": [
@@ -127,7 +127,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/portal",
         "absolute": "packages/feijoa-ui/src/portal",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/portal"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/portal/"
       },
       "dependencies": {
         "internal": [],
@@ -145,7 +145,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/box",
         "absolute": "packages/feijoa-ui/src/box",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/box"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/box/"
       },
       "dependencies": {
         "internal": [],
@@ -162,7 +162,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/calendar",
         "absolute": "packages/feijoa-ui/src/calendar",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/calendar"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/calendar/"
       },
       "dependencies": {
         "internal": [
@@ -184,7 +184,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/card",
         "absolute": "packages/feijoa-ui/src/card",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/card"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/card/"
       },
       "dependencies": {
         "internal": [
@@ -203,7 +203,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/navigation-menu",
         "absolute": "packages/feijoa-ui/src/navigation-menu",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/navigation-menu"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/navigation-menu/"
       },
       "dependencies": {
         "internal": [
@@ -225,7 +225,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/code-block",
         "absolute": "packages/feijoa-ui/src/code-block",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/code-block"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/code-block/"
       },
       "dependencies": {
         "internal": [
@@ -250,7 +250,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/menubar",
         "absolute": "packages/feijoa-ui/src/menubar",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/menubar"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/menubar/"
       },
       "dependencies": {
         "internal": [
@@ -271,7 +271,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/progress",
         "absolute": "packages/feijoa-ui/src/progress",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/progress"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/progress/"
       },
       "dependencies": {
         "internal": [
@@ -291,7 +291,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/alert-dialog",
         "absolute": "packages/feijoa-ui/src/alert-dialog",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/alert-dialog"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/alert-dialog/"
       },
       "dependencies": {
         "internal": [
@@ -312,7 +312,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/input",
         "absolute": "packages/feijoa-ui/src/input",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/input"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/input/"
       },
       "dependencies": {
         "internal": [
@@ -331,7 +331,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/cn",
         "absolute": "packages/feijoa-ui/src/cn",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/cn"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/cn/"
       },
       "dependencies": {
         "internal": [],
@@ -349,7 +349,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/alert",
         "absolute": "packages/feijoa-ui/src/alert",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/alert"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/alert/"
       },
       "dependencies": {
         "internal": [
@@ -369,7 +369,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/accordion",
         "absolute": "packages/feijoa-ui/src/accordion",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/accordion"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/accordion/"
       },
       "dependencies": {
         "internal": [
@@ -390,7 +390,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/skeleton",
         "absolute": "packages/feijoa-ui/src/skeleton",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/skeleton"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/skeleton/"
       },
       "dependencies": {
         "internal": [
@@ -407,7 +407,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/figure",
         "absolute": "packages/feijoa-ui/src/figure",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/figure"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/figure/"
       },
       "dependencies": {
         "internal": [
@@ -429,7 +429,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/separator",
         "absolute": "packages/feijoa-ui/src/separator",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/separator"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/separator/"
       },
       "dependencies": {
         "internal": [
@@ -449,7 +449,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/theme-provider",
         "absolute": "packages/feijoa-ui/src/theme-provider",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/theme-provider"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/theme-provider/"
       },
       "dependencies": {
         "internal": [],
@@ -466,7 +466,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/heading",
         "absolute": "packages/feijoa-ui/src/heading",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/heading"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/heading/"
       },
       "dependencies": {
         "internal": [
@@ -483,7 +483,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/mdx-components",
         "absolute": "packages/feijoa-ui/src/mdx-components",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/mdx-components"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/mdx-components/"
       },
       "dependencies": {
         "internal": [
@@ -508,7 +508,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/toast",
         "absolute": "packages/feijoa-ui/src/toast",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/toast"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/toast/"
       },
       "dependencies": {
         "internal": [
@@ -530,7 +530,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/hover-card",
         "absolute": "packages/feijoa-ui/src/hover-card",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/hover-card"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/hover-card/"
       },
       "dependencies": {
         "internal": [
@@ -550,7 +550,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/checkbox",
         "absolute": "packages/feijoa-ui/src/checkbox",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/checkbox"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/checkbox/"
       },
       "dependencies": {
         "internal": [
@@ -571,7 +571,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/code",
         "absolute": "packages/feijoa-ui/src/code",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/code"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/code/"
       },
       "dependencies": {
         "internal": [
@@ -589,7 +589,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/label",
         "absolute": "packages/feijoa-ui/src/label",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/label"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/label/"
       },
       "dependencies": {
         "internal": [
@@ -610,7 +610,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/dropdown-menu",
         "absolute": "packages/feijoa-ui/src/dropdown-menu",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/dropdown-menu"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/dropdown-menu/"
       },
       "dependencies": {
         "internal": [
@@ -631,7 +631,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/slider",
         "absolute": "packages/feijoa-ui/src/slider",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/slider"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/slider/"
       },
       "dependencies": {
         "internal": [
@@ -651,7 +651,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/image",
         "absolute": "packages/feijoa-ui/src/image",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/image"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/image/"
       },
       "dependencies": {
         "internal": [
@@ -671,7 +671,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/context-menu",
         "absolute": "packages/feijoa-ui/src/context-menu",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/context-menu"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/context-menu/"
       },
       "dependencies": {
         "internal": [
@@ -692,7 +692,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/toggle",
         "absolute": "packages/feijoa-ui/src/toggle",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/toggle"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/toggle/"
       },
       "dependencies": {
         "internal": [
@@ -713,7 +713,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/dialog",
         "absolute": "packages/feijoa-ui/src/dialog",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/dialog"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/dialog/"
       },
       "dependencies": {
         "internal": [
@@ -734,7 +734,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/popover",
         "absolute": "packages/feijoa-ui/src/popover",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/popover"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/popover/"
       },
       "dependencies": {
         "internal": [
@@ -754,7 +754,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/container",
         "absolute": "packages/feijoa-ui/src/container",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/container"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/container/"
       },
       "dependencies": {
         "internal": [
@@ -771,7 +771,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/textarea",
         "absolute": "packages/feijoa-ui/src/textarea",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/textarea"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/textarea/"
       },
       "dependencies": {
         "internal": [
@@ -790,7 +790,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/button",
         "absolute": "packages/feijoa-ui/src/button",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/button"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/button/"
       },
       "dependencies": {
         "internal": [
@@ -811,7 +811,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/link",
         "absolute": "packages/feijoa-ui/src/link",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/link"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/link/"
       },
       "dependencies": {
         "internal": [
@@ -830,7 +830,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/scroll-area",
         "absolute": "packages/feijoa-ui/src/scroll-area",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/scroll-area"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/scroll-area/"
       },
       "dependencies": {
         "internal": [
@@ -850,7 +850,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/table",
         "absolute": "packages/feijoa-ui/src/table",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/table"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/table/"
       },
       "dependencies": {
         "internal": [
@@ -869,7 +869,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/use-toast",
         "absolute": "packages/feijoa-ui/src/use-toast",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/use-toast"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/use-toast/"
       },
       "dependencies": {
         "internal": [
@@ -888,7 +888,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/blockquote",
         "absolute": "packages/feijoa-ui/src/blockquote",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/blockquote"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/blockquote/"
       },
       "dependencies": {
         "internal": [
@@ -906,7 +906,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/collapsible",
         "absolute": "packages/feijoa-ui/src/collapsible",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/collapsible"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/collapsible/"
       },
       "dependencies": {
         "internal": [],
@@ -923,7 +923,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/list",
         "absolute": "packages/feijoa-ui/src/list",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/list"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/list/"
       },
       "dependencies": {
         "internal": [
@@ -941,7 +941,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/avatar",
         "absolute": "packages/feijoa-ui/src/avatar",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/avatar"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/avatar/"
       },
       "dependencies": {
         "internal": [
@@ -961,7 +961,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/twitter-mention",
         "absolute": "packages/feijoa-ui/src/twitter-mention",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/twitter-mention"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/twitter-mention/"
       },
       "dependencies": {
         "internal": [
@@ -978,7 +978,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/aspect-ratio",
         "absolute": "packages/feijoa-ui/src/aspect-ratio",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/aspect-ratio"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/aspect-ratio/"
       },
       "dependencies": {
         "internal": [],
@@ -995,7 +995,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/switch",
         "absolute": "packages/feijoa-ui/src/switch",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/switch"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/switch/"
       },
       "dependencies": {
         "internal": [
@@ -1015,7 +1015,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/command",
         "absolute": "packages/feijoa-ui/src/command",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/command"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/command/"
       },
       "dependencies": {
         "internal": [
@@ -1038,7 +1038,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/radio-group",
         "absolute": "packages/feijoa-ui/src/radio-group",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/radio-group"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/radio-group/"
       },
       "dependencies": {
         "internal": [
@@ -1059,7 +1059,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/text",
         "absolute": "packages/feijoa-ui/src/text",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/text"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/text/"
       },
       "dependencies": {
         "internal": [
@@ -1076,7 +1076,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/select",
         "absolute": "packages/feijoa-ui/src/select",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/select"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/select/"
       },
       "dependencies": {
         "internal": [
@@ -1097,7 +1097,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/stack",
         "absolute": "packages/feijoa-ui/src/stack",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/stack"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/stack/"
       },
       "dependencies": {
         "internal": [
@@ -1114,7 +1114,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/tldr",
         "absolute": "packages/feijoa-ui/src/tldr",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/tldr"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/tldr/"
       },
       "dependencies": {
         "internal": [
@@ -1131,7 +1131,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/sheet",
         "absolute": "packages/feijoa-ui/src/sheet",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/sheet"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/sheet/"
       },
       "dependencies": {
         "internal": [
@@ -1153,7 +1153,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/theme-toggle",
         "absolute": "packages/feijoa-ui/src/theme-toggle",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/theme-toggle"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/theme-toggle/"
       },
       "dependencies": {
         "internal": [
@@ -1174,7 +1174,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/footnote",
         "absolute": "packages/feijoa-ui/src/footnote",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/footnote"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/footnote/"
       },
       "dependencies": {
         "internal": [
@@ -1194,7 +1194,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/github-mention",
         "absolute": "packages/feijoa-ui/src/github-mention",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/github-mention"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/github-mention/"
       },
       "dependencies": {
         "internal": [
@@ -1211,7 +1211,7 @@
       "rootPaths": {
         "relative": "packages/feijoa-ui/src/badge",
         "absolute": "packages/feijoa-ui/src/badge",
-        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/badge"
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/badge/"
       },
       "dependencies": {
         "internal": [

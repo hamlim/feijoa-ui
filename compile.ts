@@ -28,7 +28,7 @@ for (let recipeFileName of dir) {
           "./",
           "",
         )
-      }${recipeFileName}`,
+      }${recipeFileName}/`,
     },
     dependencies: recipeConfig.dependencies,
     files: recipeConfig.files || [`./${recipeFileName}.tsx`],

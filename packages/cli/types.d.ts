@@ -2,7 +2,7 @@ export type Config = {
   /**
    * The package root path
    *
-   * Components, utils, etc will be installed under `<rootPath>/feijoa-ui/`
+   * Recipes will be installed under `<rootPath>/feijoa-ui/`
    * Example file tree:
    * ```
    * /<rootPath>/
@@ -16,6 +16,13 @@ export type Config = {
    * ```
    */
   rootPath: string;
+  /**
+   * The preferred package manager for installing 3rd party dependencies
+   *
+   * This will be executed to install the dependencies
+   * needed for specific recipes!
+   */
+  packageManager: "yarn" | "npm" | "pnpm" | "bun";
 };
 
 export type RecipesMetadata = {

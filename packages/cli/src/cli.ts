@@ -1,11 +1,62 @@
 import "./utils/console-table-shim";
+import { exec as execOLD } from "child_process";
 import { exists, mkdir, readFile, writeFile } from "fs/promises";
 import k from "kleur";
 import path from "node:path";
+import { promisify } from "util";
 import type { Config, RecipesMetadata } from "../types";
 import { distilDependencies } from "./utils/distil-dependencies";
 import mergeDeep from "./utils/merge-deep";
 import stripJsonComments from "./utils/strip-json-comments";
+
+let exec = promisify(execOLD);
+
+function installDependencies({ externalDependencies, packageManager }: {
+  externalDependencies: Array<string>;
+  packageManager: Config["packageManager"];
+}) {
+  switch (packageManager) {
+    case "yarn":
+    case "bun": {
+      return exec(`${packageManager} add ${externalDependencies.join(" ")}`);
+    }
+    case "pnpm":
+    case "npm": {
+      return exec(`${packageManager} install ${externalDependencies.join(" ")}`);
+    }
+    default: {
+      throw new Error(`Unknown package manager referenced: "${packageManager}"`);
+    }
+  }
+}
+
+function installRecipes({
+  internalDependencies,
+  metadataCache,
+  config,
+}: {
+  internalDependencies: Array<string>;
+  metadataCache: RecipesMetadata;
+  config: Config;
+}) {
+  let recipes = metadataCache.recipes.filter(recipe => internalDependencies.includes(recipe.name));
+
+  let recipesAndPaths = recipes.map(recipe => ({
+    ...recipe,
+    paths: recipe.files.map(fileName => ({ url: new URL(fileName, recipe.rootPaths.github).toString(), fileName })),
+  }));
+
+  return recipesAndPaths.flatMap(recipeWithPath =>
+    recipeWithPath.paths.map(pathCtx => {
+      return fetch(pathCtx.url).then(content => {
+        if (content.status > 200) {
+          throw new Error(`Failed to fetch ${pathCtx.fileName}`);
+        }
+        return content.text();
+      }).then(content => writeFile(path.join(config.rootPath, "feijoa-ui", pathCtx.fileName), content));
+    })
+  );
+}
 
 interface Args {
   "--help"?: boolean;
@@ -125,6 +176,7 @@ export default {
       // stub new config
       let config: Config = {
         rootPath: process.cwd(),
+        packageManager: "bun",
       };
 
       // Create directory
@@ -441,30 +493,54 @@ This file shouldn't be deleted, assuming no known recipes are installed!`);
       return;
     }
     case "add": {
-      let recipesRequested = Object.keys(args).filter(arg => !arg.startsWith("--"));
+      let recipesRequested = Object.keys(args).filter(arg => !(arg.startsWith("--") || arg === "add"));
       let unknownRecipes = recipesRequested.filter(recipe => !availableRecipes.includes(recipe));
       let knownRecipes = recipesRequested.filter(recipe => availableRecipes.includes(recipe));
+      let newRecipes = knownRecipes.filter(recipe => !(recipe in installDependencies));
       if (!args["--silent"] && unknownRecipes.length) {
         console.log(
           `Attmpted to add the following recipes that aren't supported, check for typos and make sure the recipe exists by running \`feijoa-ui list\`!`,
         );
         unknownRecipes.forEach(recipe => console.log(`- ${recipe}`));
-        if (!knownRecipes.length) {
+        if (!newRecipes.length) {
           return;
-        } else {
-          console.log(`Adding recipes...`);
-          // flatten requested recipes, e.g. user requested rec-a rec-b, but rec-b depends on rec-a and rec-c, final list should
-          // be rec-a rec-b, rec-c
-          let { internalDependencies, externalDependencies } = distilDependencies({
-            recipes: knownRecipes,
-            metadataCache,
-          });
-
-          // Add external dependencies
-          // Fetch and save internal dependencies
-          // Update pit file
         }
       }
+      console.log(`Adding recipes...`);
+      // flatten requested recipes, e.g. user requested rec-a rec-b, but rec-b depends on rec-a and rec-c, final list should
+      // be rec-a rec-b, rec-c
+      let { internalDependencies, externalDependencies } = distilDependencies({
+        recipes: newRecipes,
+        metadataCache,
+      });
+
+      await Promise.all([
+        // Add external dependencies
+        installDependencies({ externalDependencies, packageManager: config.packageManager }),
+        // Fetch and save internal dependencies
+        ...installRecipes({
+          internalDependencies,
+          config,
+          metadataCache,
+        }),
+        // Update pit file
+        writeFile(
+          pitfile,
+          JSON.stringify({
+            ...pit,
+            recipes: {
+              ...pit.recipes,
+              ...Object.fromEntries(internalDependencies.map(recipeName => [recipeName, latestRecipeVersion])),
+            },
+          } as Pit),
+        ),
+      ]);
+
+      console.log(
+        `Successfully installed 3rd party dependencies, and added the following recipes: ${
+          internalDependencies.join(" ")
+        }`,
+      );
     }
   }
 }

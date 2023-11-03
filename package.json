@@ -19,5 +19,9 @@
     "packages/*",
     "site",
     "example"
-  ]
+  ],
+  "resolutions": {
+    "@types/react": "latest",
+    "@types/react-dom": "latest"
+  }
 }

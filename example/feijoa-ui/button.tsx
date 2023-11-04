@@ -40,7 +40,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
     return (
-      // @ts-ignore
+      // @ts-ignore - incompatible types somewhere being resolved in Vercel when deploying
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}

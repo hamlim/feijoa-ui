@@ -67,12 +67,10 @@ export function useTapable(
     onClick: disabled ? noop : handleClick,
     ref: sharedRef,
     role: "button",
-    tabIndex: disabled ? "-1" : "0",
-    "aria-disabled": disabled ? "true" : undefined,
+    tabIndex: disabled ? -1 : 0,
+    "aria-disabled": disabled ? true : undefined,
   };
 }
-
-export default useTapable;
 
 export interface TapableProps extends UseTapableProps {}
 
@@ -81,5 +79,6 @@ export let Tapable = forwardRef<any, TapableProps>(function Tapable(
   ref,
 ) {
   let ariaProps = useTapable(props, ref);
+  // @ts-ignore
   return <Box {...props} {...ariaProps} />;
 });

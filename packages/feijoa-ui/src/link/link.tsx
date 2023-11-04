@@ -1,8 +1,7 @@
 import { cn } from "@recipes/cn";
 import NextLink, { LinkProps } from "next/link";
 
-interface BaseLinkProps {
-  className?: string;
+interface BaseLinkProps extends React.HTMLProps<HTMLAnchorElement> {
 }
 
 let linkClass = "font-medium text-primary underline underline-offset-4";

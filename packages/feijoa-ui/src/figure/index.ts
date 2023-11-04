@@ -1,1 +1,1 @@
-export * from './figure';
+export { Figure } from "./figure";

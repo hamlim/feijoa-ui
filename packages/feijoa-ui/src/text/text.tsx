@@ -1,6 +1,6 @@
 import { cn } from "@recipes/cn";
 
-interface Props {
+interface Props extends React.HTMLProps<HTMLParagraphElement> {
   className?: string;
 }
 

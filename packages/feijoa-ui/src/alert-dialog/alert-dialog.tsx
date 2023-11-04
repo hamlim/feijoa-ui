@@ -10,7 +10,7 @@ let AlertDialog = AlertDialogPrimitive.Root;
 
 let AlertDialogTrigger = AlertDialogPrimitive.Trigger;
 
-export let AlertDialogPortal = AlertDialogPrimitive.Portal;
+let AlertDialogPortal = AlertDialogPrimitive.Portal;
 
 const AlertDialogOverlay = React.forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Overlay>,
@@ -133,6 +133,7 @@ export {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
+  AlertDialogPortal,
   AlertDialogTitle,
   AlertDialogTrigger,
 };

@@ -1,1 +1,1 @@
-export * from './footnote';
+export { Footnote, FootnoteRef } from "./footnote";

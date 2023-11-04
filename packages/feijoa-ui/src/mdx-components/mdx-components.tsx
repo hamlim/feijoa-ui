@@ -1,4 +1,3 @@
-// import { createServerContext, useContext } from "react";
 import { Blockquote } from "@recipes/blockquote";
 import { Box } from "@recipes/box";
 import { Code } from "@recipes/code";
@@ -87,25 +86,11 @@ declare global {
   var __preContext: any;
 }
 
-// if (!globalThis.__preContext) {
-//   globalThis.__preContext = createServerContext<boolean>("preContext", false);
-// }
-
 export function pre(props: Props<typeof CodeBlock>) {
   return <CodeBlock {...props} />;
-  // return (
-  //   <globalThis.__preContext.Provider value={true}>
-  //     <Box {...props} />
-  //   </globalThis.__preContext.Provider>
-  // );
 }
 
 export function code(props: Props<typeof Code>) {
-  // let isPre = useContext(globalThis.__preContext);
-  // if (isPre) {
-  //   let codeBlockProps = props as Props<typeof CodeBlock>;
-  //   return <CodeBlock {...codeBlockProps} />;
-  // }
   return (
     <Box is="span">
       <Code {...props} />

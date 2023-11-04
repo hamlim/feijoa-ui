@@ -7,7 +7,6 @@ interface Props {
 export function TwitterMention(props: Props) {
   return (
     <BaseLink
-      is="a"
       href={`https://twitter.com/${props.children}`}
       target="_blank"
       rel="nooperner noreferrer"

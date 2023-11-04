@@ -21,7 +21,7 @@
     "example"
   ],
   "resolutions": {
-    "@types/react": "latest",
-    "@types/react-dom": "latest"
+    "@types/react": "18.2.34",
+    "@types/react-dom": "18.2.14"
   }
 }

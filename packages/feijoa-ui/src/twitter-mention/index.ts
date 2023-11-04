@@ -1,1 +1,1 @@
-export * from './twitter-mention';
+export { TwitterMention } from "./twitter-mention";

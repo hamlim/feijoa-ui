@@ -1,1 +1,4 @@
-{"name":"theme-toggle","dependencies":{"internal":["button","dropdown-menu"],"external":["lucide-react","next-themes"]}}
+{
+  "name": "theme-toggle",
+  "dependencies": { "internal": ["button", "dropdown-menu"], "external": ["lucide-react", "next-themes"] }
+}

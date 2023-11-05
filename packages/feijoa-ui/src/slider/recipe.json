@@ -1,1 +1,1 @@
-{"name":"slider","dependencies":{"internal":["cn"],"external":["@radix-ui/react-slider","react"]}}
+{ "name": "slider", "dependencies": { "internal": ["cn"], "external": ["@radix-ui/react-slider", "react"] } }

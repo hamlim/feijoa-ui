@@ -1,1 +1,1 @@
-{"name":"blockquote","dependencies":{"internal":["box","cn"],"external":[]}}
+{ "name": "blockquote", "dependencies": { "internal": ["box", "cn"], "external": [] } }

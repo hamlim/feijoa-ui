@@ -1,1 +1,1 @@
-{"name":"footnote","dependencies":{"internal":["box","link"],"external":["react"]}}
+{ "name": "footnote", "dependencies": { "internal": ["box", "link"], "external": ["react"] } }

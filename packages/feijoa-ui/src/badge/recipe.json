@@ -1,1 +1,1 @@
-{"name":"badge","dependencies":{"internal":["cn"],"external":["class-variance-authority","react"]}}
+{ "name": "badge", "dependencies": { "internal": ["cn"], "external": ["class-variance-authority", "react"] } }

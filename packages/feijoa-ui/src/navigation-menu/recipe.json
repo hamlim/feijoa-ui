@@ -1,1 +1,7 @@
-{"name":"navigation-menu","dependencies":{"internal":["cn"],"external":["@radix-ui/react-navigation-menu","class-variance-authority","lucide-react","react"]}}
+{
+  "name": "navigation-menu",
+  "dependencies": {
+    "internal": ["cn"],
+    "external": ["@radix-ui/react-navigation-menu", "class-variance-authority", "lucide-react", "react"]
+  }
+}

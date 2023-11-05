@@ -11,7 +11,8 @@
   "excludes": [
     "**/node_modules",
     "**/*-lock.json",
-    "bun.lockb"
+    "bun.lockb",
+    "**/.next"
   ],
   "plugins": [
     "https://plugins.dprint.dev/typescript-0.87.1.wasm",

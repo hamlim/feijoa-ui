@@ -1,1 +1,7 @@
-{"name":"mdx-components","dependencies":{"internal":["blockquote","box","code","code-block","heading","image","link","list","text"],"external":[]}}
+{
+  "name": "mdx-components",
+  "dependencies": {
+    "internal": ["blockquote", "box", "code", "code-block", "heading", "image", "link", "list", "text"],
+    "external": []
+  }
+}

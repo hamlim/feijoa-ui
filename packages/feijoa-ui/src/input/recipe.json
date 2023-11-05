@@ -1,1 +1,1 @@
-{"name":"input","dependencies":{"internal":["cn"],"external":["react"]}}
+{ "name": "input", "dependencies": { "internal": ["cn"], "external": ["react"] } }

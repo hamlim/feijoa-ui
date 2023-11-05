@@ -1,1 +1,1 @@
-{"name":"twitter-mention","dependencies":{"internal":["link"],"external":[]}}
+{ "name": "twitter-mention", "dependencies": { "internal": ["link"], "external": [] } }

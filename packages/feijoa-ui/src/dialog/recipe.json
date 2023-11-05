@@ -1,1 +1,4 @@
-{"name":"dialog","dependencies":{"internal":["cn"],"external":["@radix-ui/react-dialog","lucide-react","react"]}}
+{
+  "name": "dialog",
+  "dependencies": { "internal": ["cn"], "external": ["@radix-ui/react-dialog", "lucide-react", "react"] }
+}

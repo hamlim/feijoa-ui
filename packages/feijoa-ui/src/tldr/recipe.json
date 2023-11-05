@@ -1,1 +1,1 @@
-{"name":"tldr","dependencies":{"internal":["box"],"external":[]}}
+{ "name": "tldr", "dependencies": { "internal": ["box"], "external": [] } }

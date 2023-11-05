@@ -1,1 +1,7 @@
-{"name":"form","dependencies":{"internal":["cn","label"],"external":["@radix-ui/react-label","@radix-ui/react-slot","react","react-hook-form"]}}
+{
+  "name": "form",
+  "dependencies": {
+    "internal": ["cn", "label"],
+    "external": ["@radix-ui/react-label", "@radix-ui/react-slot", "react", "react-hook-form"]
+  }
+}

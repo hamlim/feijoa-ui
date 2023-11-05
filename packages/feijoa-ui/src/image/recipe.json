@@ -1,1 +1,1 @@
-{"name":"image","dependencies":{"internal":["aspect-ratio","cn"],"external":["next"]}}
+{ "name": "image", "dependencies": { "internal": ["aspect-ratio", "cn"], "external": ["next"] } }

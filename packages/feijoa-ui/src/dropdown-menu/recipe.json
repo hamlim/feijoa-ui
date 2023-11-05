@@ -1,1 +1,4 @@
-{"name":"dropdown-menu","dependencies":{"internal":["cn"],"external":["@radix-ui/react-dropdown-menu","lucide-react","react"]}}
+{
+  "name": "dropdown-menu",
+  "dependencies": { "internal": ["cn"], "external": ["@radix-ui/react-dropdown-menu", "lucide-react", "react"] }
+}

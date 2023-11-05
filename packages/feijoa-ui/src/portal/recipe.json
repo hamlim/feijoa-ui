@@ -1,1 +1,1 @@
-{"name":"portal","dependencies":{"internal":[],"external":["react","react-dom"]}}
+{ "name": "portal", "dependencies": { "internal": [], "external": ["react", "react-dom"] } }

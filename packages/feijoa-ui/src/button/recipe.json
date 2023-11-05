@@ -1,1 +1,4 @@
-{"name":"button","dependencies":{"internal":["cn"],"external":["@radix-ui/react-slot","class-variance-authority","react"]}}
+{
+  "name": "button",
+  "dependencies": { "internal": ["cn"], "external": ["@radix-ui/react-slot", "class-variance-authority", "react"] }
+}

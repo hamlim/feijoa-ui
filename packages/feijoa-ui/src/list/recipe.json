@@ -1,1 +1,1 @@
-{"name":"list","dependencies":{"internal":["box","cn"],"external":[]}}
+{ "name": "list", "dependencies": { "internal": ["box", "cn"], "external": [] } }

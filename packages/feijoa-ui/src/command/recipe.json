@@ -1,1 +1,7 @@
-{"name":"command","dependencies":{"internal":["cn","dialog"],"external":["@radix-ui/react-dialog","cmdk","lucide-react","react"]}}
+{
+  "name": "command",
+  "dependencies": {
+    "internal": ["cn", "dialog"],
+    "external": ["@radix-ui/react-dialog", "cmdk", "lucide-react", "react"]
+  }
+}

@@ -1,15 +1,15 @@
-let path = require('path');
+let path = require("path");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-    path.join(path.dirname(require.resolve('feijoa-ui')), '**/*.js'),
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+    path.join(path.dirname(require.resolve("feijoa-ui")), "**/*.js"),
+  ],
   theme: {
     container: {
       center: true,
@@ -76,4 +76,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};

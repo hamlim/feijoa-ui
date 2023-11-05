@@ -1,1 +1,4 @@
-{"name":"accordion","dependencies":{"internal":["cn"],"external":["@radix-ui/react-accordion","lucide-react","react"]}}
+{
+  "name": "accordion",
+  "dependencies": { "internal": ["cn"], "external": ["@radix-ui/react-accordion", "lucide-react", "react"] }
+}

@@ -1,1 +1,1 @@
-{"name":"tooltip","dependencies":{"internal":["cn"],"external":["@radix-ui/react-tooltip","react"]}}
+{ "name": "tooltip", "dependencies": { "internal": ["cn"], "external": ["@radix-ui/react-tooltip", "react"] } }

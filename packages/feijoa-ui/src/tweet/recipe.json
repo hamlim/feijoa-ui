@@ -1,1 +1,1 @@
-{"name":"tweet","dependencies":{"internal":["box"],"external":["react","react-tweet"]}}
+{ "name": "tweet", "dependencies": { "internal": ["box"], "external": ["react", "react-tweet"] } }

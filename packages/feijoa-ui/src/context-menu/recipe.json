@@ -1,1 +1,4 @@
-{"name":"context-menu","dependencies":{"internal":["cn"],"external":["@radix-ui/react-context-menu","lucide-react","react"]}}
+{
+  "name": "context-menu",
+  "dependencies": { "internal": ["cn"], "external": ["@radix-ui/react-context-menu", "lucide-react", "react"] }
+}

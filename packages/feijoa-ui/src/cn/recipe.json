@@ -1,1 +1,1 @@
-{"name":"cn","dependencies":{"internal":[],"external":["clsx","tailwind-merge"]}}
+{ "name": "cn", "dependencies": { "internal": [], "external": ["clsx", "tailwind-merge"] } }

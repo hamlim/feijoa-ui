@@ -1,1 +1,7 @@
-{"name":"aspect-ratio","dependencies":{"internal":[],"external":["@radix-ui/react-aspect-ratio"]}}
+{
+  "name": "aspect-ratio",
+  "dependencies": {
+    "internal": [],
+    "external": ["@radix-ui/react-aspect-ratio"]
+  }
+}

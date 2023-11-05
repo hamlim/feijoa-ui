@@ -1,1 +1,1 @@
-{"name":"use-toast","dependencies":{"internal":["toast"],"external":["react"]}}
+{ "name": "use-toast", "dependencies": { "internal": ["toast"], "external": ["react"] } }

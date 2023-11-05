@@ -1,1 +1,1 @@
-{"name":"popover","dependencies":{"internal":["cn"],"external":["@radix-ui/react-popover","react"]}}
+{ "name": "popover", "dependencies": { "internal": ["cn"], "external": ["@radix-ui/react-popover", "react"] } }

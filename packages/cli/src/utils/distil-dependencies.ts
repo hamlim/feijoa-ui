@@ -13,8 +13,10 @@ export function distilDependencies({
   do {
     if (nodes[0].dependencies.internal.length) {
       internalDeps.push(...nodes[0].dependencies.internal);
-      externalDeps.push(...nodes[0].dependencies.external);
       nodes.push(...metadataCache.recipes.filter(rec => nodes[0].dependencies.internal.includes(rec.name)));
+    }
+    if (nodes[0].dependencies.external.length) {
+      externalDeps.push(...nodes[0].dependencies.external);
     }
     nodes.shift();
   } while (nodes.length);

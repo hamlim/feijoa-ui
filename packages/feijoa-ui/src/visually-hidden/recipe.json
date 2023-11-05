@@ -1,0 +1,4 @@
+{
+  "name": "visually-hidden",
+  "dependencies": { "internal": ["box", "cn"], "external": [] }
+}

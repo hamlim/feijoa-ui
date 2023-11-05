@@ -155,7 +155,6 @@ You provided the following arguments: ${argv.join(" ")}`);
 
 - Create './feijoa-ui.config.ts'
 - Create a './feijoa-ui' directory
-- Add './feijoa-ui/.pit' to gitignore
 - Add import alias to tsconfig.json
 - Configure Tailwind`);
       }
@@ -197,24 +196,6 @@ export default {
       } catch (e) {
         console.log(`Failed to create ./feijoa-ui/.pit file, raw error below:`);
         console.log(e);
-      }
-
-      // Add .pit to gitignore
-      let gitIgnoreExists = await exists(path.join(config.rootPath, ".gitignore"));
-      try {
-        if (gitIgnoreExists) {
-          let contents = (await readFile(path.join(config.rootPath, ".gitignore"))).toString();
-          await writeFile(
-            path.join(config.rootPath, ".gitignore"),
-            `${contents}\n# Feijoa UI recipe version metadata:\n.pit`,
-          );
-        } else {
-          await writeFile(path.join(config.rootPath, ".gitignore"), `# Feijoa UI recipe version metadata:\n.pit`);
-        }
-      } catch (e) {
-        console.log(`Failed to add .pit pattern to .gitignore, raw error below:`);
-        console.log(e);
-        return;
       }
 
       // Update tsconfig with import paths:

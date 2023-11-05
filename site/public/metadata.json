@@ -1,5 +1,5 @@
 {
-  "version": "607f69533fd60f39e0a5b04c5bb786394dbc6299",
+  "version": "b31dc684f08f248d981dd7391ebee38afe4ad070",
   "recipes": [
     {
       "name": "tapable",
@@ -242,7 +242,8 @@
         "./code-block.tsx",
         "./extensions/collapse-extension.tsx",
         "./extensions/collapse.tsx",
-        "./extensions/copy-code.tsx"
+        "./extensions/copy-code.tsx",
+        "./extensions/theme-wrapper.tsx"
       ]
     },
     {
@@ -934,6 +935,24 @@
       },
       "files": [
         "./list.tsx"
+      ]
+    },
+    {
+      "name": "visually-hidden",
+      "rootPaths": {
+        "relative": "packages/feijoa-ui/src/visually-hidden/",
+        "absolute": "packages/feijoa-ui/src/visually-hidden/",
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/visually-hidden/"
+      },
+      "dependencies": {
+        "internal": [
+          "box",
+          "cn"
+        ],
+        "external": []
+      },
+      "files": [
+        "./visually-hidden.tsx"
       ]
     },
     {

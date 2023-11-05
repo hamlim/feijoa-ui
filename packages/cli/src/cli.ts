@@ -68,7 +68,10 @@ interface Args {
 type Pit = {
   recipes: {
     // mapping of name to version for that component
-    [recipeName: string]: string;
+    [recipeName: string]: {
+      version: string;
+      edited: boolean;
+    };
   };
 };
 
@@ -157,6 +160,11 @@ You provided the following arguments: ${argv.join(" ")}`);
 - Configure Tailwind`);
       }
       // Create config file
+      // stub new config
+      let config: Config = {
+        rootPath: process.cwd(),
+        packageManager: "bun",
+      };
       try {
         await writeFile(
           path.join(process.cwd(), "feijoa-ui.config.ts"),
@@ -164,6 +172,7 @@ You provided the following arguments: ${argv.join(" ")}`);
 
 export default {
   rootPath: "./",
+  packageManager: "${config.packageManager}",
 } satisfies Config;
 `,
         );
@@ -172,12 +181,6 @@ export default {
         console.log(e);
         return;
       }
-
-      // stub new config
-      let config: Config = {
-        rootPath: process.cwd(),
-        packageManager: "bun",
-      };
 
       // Create directory
       try {
@@ -190,7 +193,7 @@ export default {
 
       // Create .pit file
       try {
-        await writeFile(path.join(config.rootPath, "feijoa-ui", ".pit"), JSON.stringify({}, null, 2));
+        await writeFile(path.join(config.rootPath, "feijoa-ui", ".pit"), JSON.stringify({ recipes: {} }, null, 2));
       } catch (e) {
         console.log(`Failed to create ./feijoa-ui/.pit file, raw error below:`);
         console.log(e);
@@ -492,6 +495,8 @@ This file shouldn't be deleted, assuming no known recipes are installed!`);
       }
       return;
     }
+    // @todo: account for existing installed recipe at a diff version
+    // @todo: account for existing installed recipe that has been edited at the same version!
     case "add": {
       let recipesRequested = Object.keys(args).filter(arg => !(arg.startsWith("--") || arg === "add"));
       let unknownRecipes = recipesRequested.filter(recipe => !availableRecipes.includes(recipe));
@@ -530,7 +535,9 @@ This file shouldn't be deleted, assuming no known recipes are installed!`);
             ...pit,
             recipes: {
               ...pit.recipes,
-              ...Object.fromEntries(internalDependencies.map(recipeName => [recipeName, latestRecipeVersion])),
+              ...Object.fromEntries(
+                internalDependencies.map(recipeName => [recipeName, { version: latestRecipeVersion, edited: false }]),
+              ),
             },
           } as Pit),
         ),

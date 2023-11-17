@@ -5,6 +5,7 @@ import {
   Code,
   CodeBlock,
   Container,
+  ErrorBoundary,
   Figure,
   Footnote,
   FootnoteRef,
@@ -167,6 +168,11 @@ export default function Page() {
           fill
           alt="a snowy rooftop"
         />
+      </Example>
+      <Example title="ErrorBoundary">
+        <ErrorBoundary fallback={<Text>Fallback!</Text>}>
+          If I throw an error here - I'll be caught!
+        </ErrorBoundary>
       </Example>
     </Stack>
   );

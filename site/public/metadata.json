@@ -1,5 +1,5 @@
 {
-  "version": "b31dc684f08f248d981dd7391ebee38afe4ad070",
+  "version": "b653ad23d253fe5e75260621f61aaf3fbd8cd8f9",
   "recipes": [
     {
       "name": "tapable",
@@ -544,6 +544,23 @@
       },
       "files": [
         "./hover-card.tsx"
+      ]
+    },
+    {
+      "name": "error-boundary",
+      "rootPaths": {
+        "relative": "packages/feijoa-ui/src/error-boundary/",
+        "absolute": "packages/feijoa-ui/src/error-boundary/",
+        "github": "https://raw.githubusercontent.com/hamlim/feijoa-ui/main/packages/feijoa-ui/src/error-boundary/"
+      },
+      "dependencies": {
+        "internal": [],
+        "external": [
+          "react"
+        ]
+      },
+      "files": [
+        "./error-boundary.tsx"
       ]
     },
     {

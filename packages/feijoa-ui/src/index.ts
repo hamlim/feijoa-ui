@@ -19,6 +19,7 @@ export * from "./container";
 export * from "./context-menu";
 export * from "./dialog";
 export * from "./dropdown-menu";
+export * from "./error-boundary";
 export * from "./figure";
 export * from "./footnote";
 export * from "./form";

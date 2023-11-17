@@ -127,6 +127,7 @@ export * from "@recipes/container";
 export * from "@recipes/context-menu";
 export * from "@recipes/dialog";
 export * from "@recipes/dropdown-menu";
+export * from "@recipes/error-boundary";
 export * from "@recipes/figure";
 export * from "@recipes/footnote";
 export * from "@recipes/form";

@@ -1,9 +1,7 @@
 import { Box } from "@recipes/box";
 import { cn } from "@recipes/cn";
 
-interface Props {
-  className?: string;
-}
+interface Props extends React.HTMLProps<HTMLElement> {}
 
 export function Blockquote(props: Props) {
   return (

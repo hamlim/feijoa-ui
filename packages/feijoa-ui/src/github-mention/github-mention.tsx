@@ -1,6 +1,6 @@
 import { BaseLink } from "@recipes/link";
 
-interface Props {
+interface Props extends React.HTMLProps<HTMLAnchorElement> {
   children: string;
 }
 

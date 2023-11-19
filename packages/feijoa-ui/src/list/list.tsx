@@ -1,9 +1,8 @@
 import { Box } from "@recipes/box";
 import { cn } from "@recipes/cn";
 
-interface ListProps {
+interface ListProps extends React.HTMLProps<HTMLUListElement> {
   is?: "ul" | "ol";
-  className?: string;
 }
 
 export function List({ is = "ul", ...props }: ListProps) {

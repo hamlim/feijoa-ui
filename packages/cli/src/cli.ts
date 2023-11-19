@@ -156,7 +156,8 @@ You provided the following arguments: ${argv.join(" ")}`);
 - Create './feijoa-ui.config.ts'
 - Create a './feijoa-ui' directory
 - Add import alias to tsconfig.json
-- Configure Tailwind`);
+- Configure Tailwind
+- Install shared dependencies`);
       }
       // Create config file
       // stub new config
@@ -242,172 +243,99 @@ export default {
       }
 
       // Update tailwind config
-      let tailwindConfigExists = await exists(path.join(config.rootPath, "tailwind.config.js"));
       try {
-        if (tailwindConfigExists) {
-          let tailwindConfig = await import(path.join(config.rootPath, "tailwind.config.js"));
-          let newConfig = mergeDeep(tailwindConfig, {
-            content: ["./feijoa-ui/**/*.{ts,tsx}"],
-            theme: {
-              container: {
-                center: true,
-                padding: "2rem",
-                screens: {
-                  "2xl": "1400px",
-                },
-              },
-              extend: {
-                colors: {
-                  border: "hsl(var(--border))",
-                  input: "hsl(var(--input))",
-                  ring: "hsl(var(--ring))",
-                  background: "hsl(var(--background))",
-                  foreground: "hsl(var(--foreground))",
-                  primary: {
-                    DEFAULT: "hsl(var(--primary))",
-                    foreground: "hsl(var(--primary-foreground))",
-                  },
-                  secondary: {
-                    DEFAULT: "hsl(var(--secondary))",
-                    foreground: "hsl(var(--secondary-foreground))",
-                  },
-                  destructive: {
-                    DEFAULT: "hsl(var(--destructive))",
-                    foreground: "hsl(var(--destructive-foreground))",
-                  },
-                  muted: {
-                    DEFAULT: "hsl(var(--muted))",
-                    foreground: "hsl(var(--muted-foreground))",
-                  },
-                  accent: {
-                    DEFAULT: "hsl(var(--accent))",
-                    foreground: "hsl(var(--accent-foreground))",
-                  },
-                  popover: {
-                    DEFAULT: "hsl(var(--popover))",
-                    foreground: "hsl(var(--popover-foreground))",
-                  },
-                  card: {
-                    DEFAULT: "hsl(var(--card))",
-                    foreground: "hsl(var(--card-foreground))",
-                  },
-                },
-                borderRadius: {
-                  lg: "var(--radius)",
-                  md: "calc(var(--radius) - 2px)",
-                  sm: "calc(var(--radius) - 4px)",
-                },
-                keyframes: {
-                  "accordion-down": {
-                    from: { height: 0 },
-                    to: { height: "var(--radix-accordion-content-height)" },
-                  },
-                  "accordion-up": {
-                    from: { height: "var(--radix-accordion-content-height)" },
-                    to: { height: 0 },
-                  },
-                },
-                animation: {
-                  "accordion-down": "accordion-down 0.2s ease-out",
-                  "accordion-up": "accordion-up 0.2s ease-out",
-                },
-              },
-            },
-          });
-          await writeFile(
-            path.join(config.rootPath, "tailwind.config.js"),
-            `/** @type {import('tailwindcss').Config} */
-module.exports = {
-  ${Object.entries(newConfig).map(([key, val]) => `"${key}": ${JSON.stringify(val, null, 2)},`)}
-  plugins: [require("tailwindcss-animate")],
-};
-`,
-          );
-        } else {
-          await writeFile(
-            path.join(config.rootPath, "tailwind.config.js"),
-            `/** @type {import('tailwindcss').Config} */
-module.exports = {
-  darkMode: ["class"],
-  content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-    './feijoa-ui/**/*.{ts,tsx}',
-  ],
-  theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
+        await writeFile(
+          path.join(config.rootPath, "tailwind.config.js"),
+          `/** @type {import('tailwindcss').Config} */
+  module.exports = {
+    darkMode: ["class"],
+    content: [
+      './pages/**/*.{ts,tsx}',
+      './components/**/*.{ts,tsx}',
+      './app/**/*.{ts,tsx}',
+      './src/**/*.{ts,tsx}',
+      './feijoa-ui/**/*.{ts,tsx}',
+    ],
+    theme: {
+      container: {
+        center: true,
+        padding: "2rem",
+        screens: {
+          "2xl": "1400px",
+        },
+      },
+      extend: {
+        colors: {
+          border: "hsl(var(--border))",
+          input: "hsl(var(--input))",
+          ring: "hsl(var(--ring))",
+          background: "hsl(var(--background))",
+          foreground: "hsl(var(--foreground))",
+          primary: {
+            DEFAULT: "hsl(var(--primary))",
+            foreground: "hsl(var(--primary-foreground))",
+          },
+          secondary: {
+            DEFAULT: "hsl(var(--secondary))",
+            foreground: "hsl(var(--secondary-foreground))",
+          },
+          destructive: {
+            DEFAULT: "hsl(var(--destructive))",
+            foreground: "hsl(var(--destructive-foreground))",
+          },
+          muted: {
+            DEFAULT: "hsl(var(--muted))",
+            foreground: "hsl(var(--muted-foreground))",
+          },
+          accent: {
+            DEFAULT: "hsl(var(--accent))",
+            foreground: "hsl(var(--accent-foreground))",
+          },
+          popover: {
+            DEFAULT: "hsl(var(--popover))",
+            foreground: "hsl(var(--popover-foreground))",
+          },
+          card: {
+            DEFAULT: "hsl(var(--card))",
+            foreground: "hsl(var(--card-foreground))",
+          },
+        },
+        borderRadius: {
+          lg: "var(--radius)",
+          md: "calc(var(--radius) - 2px)",
+          sm: "calc(var(--radius) - 4px)",
+        },
+        keyframes: {
+          "accordion-down": {
+            from: { height: 0 },
+            to: { height: "var(--radix-accordion-content-height)" },
+          },
+          "accordion-up": {
+            from: { height: "var(--radix-accordion-content-height)" },
+            to: { height: 0 },
+          },
+        },
+        animation: {
+          "accordion-down": "accordion-down 0.2s ease-out",
+          "accordion-up": "accordion-up 0.2s ease-out",
+        },
       },
     },
-    extend: {
-      colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
-      },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
-      keyframes: {
-        "accordion-down": {
-          from: { height: 0 },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: 0 },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-      },
-    },
-  },
-  plugins: [require("tailwindcss-animate")],
-}
-`,
-          );
-        }
+    plugins: [require("tailwindcss-animate")],
+  }
+  `,
+        );
       } catch (e) {
-        console.log(`Failed to update tailwind.config.js, raw error below:`);
+        console.log(`Failed to update the tailwind config, raw error below:`);
+        console.log(e);
+        return;
+      }
+
+      // Install shared dependencies
+      try {
+        await exec(`${config.packageManager} install tailwind tailwindcss-animate`);
+      } catch (e) {
+        console.log(`Failed to install shared dependencies, raw error below:`);
         console.log(e);
         return;
       }

@@ -6,7 +6,6 @@ import path from "node:path";
 import { promisify } from "util";
 import type { Config, RecipesMetadata } from "../types";
 import { distilDependencies } from "./utils/distil-dependencies";
-import mergeDeep from "./utils/merge-deep";
 import stripJsonComments from "./utils/strip-json-comments";
 
 let exec = promisify(execOLD);
@@ -43,7 +42,10 @@ function installRecipes({
 
   let recipesAndPaths = recipes.map(recipe => ({
     ...recipe,
-    paths: recipe.files.map(fileName => ({ url: new URL(fileName, recipe.rootPaths.github).toString(), fileName })),
+    paths: recipe.files.map(fileName => ({
+      url: new URL(fileName, recipe.rootPaths.github).toString(),
+      fileName,
+    })),
   }));
 
   return recipesAndPaths.flatMap(recipeWithPath =>
@@ -53,7 +55,24 @@ function installRecipes({
           throw new Error(`Failed to fetch ${pathCtx.fileName}`);
         }
         return content.text();
-      }).then(content => writeFile(path.join(config.rootPath, "feijoa-ui", pathCtx.fileName), content));
+      }).then(async content => {
+        if (pathCtx.fileName.split("/").length > 1) {
+          let dirs = pathCtx.fileName.replace("./", "").split("/");
+          // drop the file name
+          dirs.pop();
+          let dirPath = path.join(config.rootPath, "feijoa-ui", ...dirs);
+          // dirs = dirs.reduce((acc, cur, idx) => {
+          //   if (idx > 0) {
+          //     return [...acc, path.join(acc[idx - 1], cur)];
+          //   }
+          //   return [...acc, cur];
+          // }, []);
+          // for (let dir of dirs) {
+          await mkdir(dirPath, { recursive: true });
+          // }
+        }
+        return writeFile(path.join(config.rootPath, "feijoa-ui", pathCtx.fileName), content);
+      });
     })
   );
 }

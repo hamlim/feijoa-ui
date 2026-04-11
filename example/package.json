@@ -16,7 +16,7 @@
   "dependencies": {
     "@radix-ui/react-slot": "1.0.2",
     "class-variance-authority": "0.7.0",
-    "next": "16.1.7",
+    "next": "16.2.3",
     "react": "experimental"
   },
   "peerDependencies": {
